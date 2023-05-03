@@ -260,7 +260,7 @@ namespace TarodevController
         #region Jump
 
         [Header("JUMPING")]
-        [SerializeField] private bool _canDoubleJump = true;
+        [SerializeField] public bool _canDoubleJump = true;
         [SerializeField] private float _jumpHeight = 30;
         [SerializeField] private float _jumpApexThreshold = 10f;
         [SerializeField] private float _coyoteTimeThreshold = 0.1f;
@@ -329,29 +329,33 @@ namespace TarodevController
         #endregion
 
         #region dash
-        [Header("DASH")][SerializeField] private float dashLength = 100;
+        [Header("DASH")][SerializeField] public bool canDash = true;
+        [SerializeField] private float dashLength = 100;
         [SerializeField] private float dashCooldown = 2;
 
         private float cooldown = 0;
 
         private void CalculateDash()
         {
-            if (Input.DashDown && cooldown <= 0)
+            if (canDash)
             {
-                Debug.Log("dash hit");
-                if (Mathf.Sign(_currentHorizontalSpeed) >= 0)
+                if (Input.DashDown && cooldown <= 0)
                 {
-                    _currentHorizontalSpeed += dashLength;
+                    Debug.Log("dash hit");
+                    if (Mathf.Sign(_currentHorizontalSpeed) >= 0)
+                    {
+                        _currentHorizontalSpeed += dashLength;
+                    }
+                    else
+                    {
+                        _currentHorizontalSpeed -= dashLength;
+                    }
+                    cooldown = dashCooldown;
                 }
                 else
                 {
-                    _currentHorizontalSpeed -= dashLength;
+                    if (cooldown > 0) cooldown -= Time.deltaTime;
                 }
-                cooldown = dashCooldown;
-            }
-            else
-            {
-                if (cooldown > 0) cooldown -= Time.deltaTime;
             }
         }
 
@@ -398,7 +402,7 @@ namespace TarodevController
                         var dir = transform.position - hit.transform.position;
                         transform.position += dir.normalized * move.magnitude;
                     }
-
+                    
                     return;
                 }
 
