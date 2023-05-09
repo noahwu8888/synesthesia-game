@@ -237,7 +237,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 163986701}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -20, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: 
+  CollisionTag: Music Logic
   EventReference:
     Guid:
       Data1: -2054436531
@@ -271,7 +271,9 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   AllowNonRigidbodyDoppler: 0
-  Params: []
+  Params:
+  - Name: Loop Truth
+    Value: 0
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
@@ -635,7 +637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 905586719}
   m_Layer: 3
-  m_Name: Music Bar
+  m_Name: Music Logic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -955,7 +957,7 @@ MonoBehaviour:
   _timeSignature: 1
   _measuresNum: 4
   _beatsPerMeasure: 4
-  barSpeed: 0
+  barSpeed: 7.058
   elapsedTime: 0
 --- !u!50 &1649869479
 Rigidbody2D:
