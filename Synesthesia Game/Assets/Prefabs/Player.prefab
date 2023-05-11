@@ -115,7 +115,7 @@ MonoBehaviour:
   _minFallSpeed: 80
   _maxFallSpeed: 120
   _canDoubleJump: 1
-  _jumpHeight: 40
+  _jumpHeight: 50
   _jumpApexThreshold: 10
   _coyoteTimeThreshold: 0.1
   _jumpBuffer: 0.1
