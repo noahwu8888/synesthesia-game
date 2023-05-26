@@ -21,7 +21,8 @@ public class MusicBarScript : MonoBehaviour
     public float _timeSignature = 4 / 4;
     public float _measuresNum;
     public float _beatsPerMeasure;
-    [SerializeField] private float barSpeed;
+    [SerializeField] public float barSpeed;
+    public float percentToEnd;
     private Vector3 startPos;
     private Vector3 endPos;
 
@@ -34,6 +35,7 @@ public class MusicBarScript : MonoBehaviour
         startPos = _startPos.transform.position;
         endPos = _endPos.transform.position;
         transform.position = startPos;
+        ContinueSongFlag = false;
         //Calucluates how long the bar should take to reach _endPos
         //barSpeed = ((_beatsPerMinute / 60f) * _timeSignature * (_measuresNum - 1)) + ((_beatsPerMinute / 60f) / (_beatsPerMeasure * 2));
     }
@@ -44,7 +46,7 @@ public class MusicBarScript : MonoBehaviour
         elapsedTime += Time.deltaTime;
 
         //calculate lerp percent
-        float percentToEnd = elapsedTime / barSpeed;
+        percentToEnd = elapsedTime / barSpeed;
         //lerp bar
         transform.position = Vector3.Lerp(startPos, endPos, percentToEnd);
         //if reach end: restart bar
@@ -52,6 +54,9 @@ public class MusicBarScript : MonoBehaviour
         {
             transform.position = startPos;
             elapsedTime = 0;
+            if(ContinueSongFlag){
+                transform.parent.gameObject.SetActive(false);
+            }
         }
     }
 

@@ -13,7 +13,29 @@ public class RoomManager : MonoBehaviour
         MusicBar = MusicLogic.transform.GetChild(2).gameObject.GetComponent<MusicBarScript>();
 
     }
-    private void OnTriggerStay2D(Collider2D other)
+
+    public bool isMusicLogicActive()
+    {
+        return MusicLogic.activeSelf;
+    }
+
+    public void continueSongLeave()
+    {
+        MusicBar.ContinueSongFlag = true;
+        virtualCam.SetActive(false);
+    }
+
+    public void continueSongEnter()
+    {
+        MusicBar.ContinueSongFlag = false;
+        MusicLogic.SetActive(true);
+
+        virtualCam.SetActive(true);
+
+    }
+
+
+    /*private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Player") && other.isTrigger)
         {
@@ -28,5 +50,5 @@ public class RoomManager : MonoBehaviour
             MusicLogic.SetActive(false);
             virtualCam.SetActive(false);
         }
-    }
+    }*/
 }
