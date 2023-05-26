@@ -29,7 +29,7 @@ public class RoomTransition : MonoBehaviour
         if(StartNextRoom){
             if(!RoomManagerPrev.isMusicLogicActive()){
                 RoomManagerNext.continueSongEnter();
-                StartNextRoom = false;
+                StartNextRoom = false;                
             }
         }
         if(StartPrevRoom){

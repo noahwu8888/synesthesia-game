@@ -374,7 +374,10 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Desktop/Master
-  Banks: []
+  Banks:
+  - Desktop/Background
+  - Desktop/Level
+  - Desktop/PlayerSounds
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
