@@ -401,6 +401,7 @@ namespace TarodevController
                         if (_currentVerticalSpeed < 0) _currentVerticalSpeed = 0;
                         var dir = transform.position - hit.transform.position;
                         transform.position += dir.normalized * move.magnitude;
+                        Debug.Log("Ledge Hit");
                     }
                     
                     return;

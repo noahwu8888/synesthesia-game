@@ -254,7 +254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9118609971542130152, guid: fe183227489ceee4581b708a75207f7d, type: 3}
       propertyPath: _detectorCount
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9118609971542130152, guid: fe183227489ceee4581b708a75207f7d, type: 3}
       propertyPath: _detectionRayLength
