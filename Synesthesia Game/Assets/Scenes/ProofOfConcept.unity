@@ -401,7 +401,7 @@ Transform:
   - {fileID: 1899093116}
   - {fileID: 2078903736}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &398898685
 GameObject:
@@ -765,7 +765,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 466583724}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30, y: 11, z: -10}
+  m_LocalPosition: {x: -32.22222, y: 11, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -929,6 +929,57 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3663770331314950917, guid: b60f67a8168c689489ba5821b20bd558, type: 3}
   m_PrefabInstance: {fileID: 467439222}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &628798296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 628798297}
+  - component: {fileID: 628798298}
+  m_Layer: 0
+  m_Name: Audio Emitter
+  m_TagString: Music Logic
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &628798297
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628798296}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -33.35, y: 15.06, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &628798298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628798296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c52056cc04c0442a84c83166ad8536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomList:
+  - roomObject: {fileID: 2095168891}
+    startPos: {fileID: 0}
+    endPos: {fileID: 0}
+  - roomObject: {fileID: 345684452}
+    startPos: {fileID: 0}
+    endPos: {fileID: 0}
 --- !u!1 &672863751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,7 +1110,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &905586718 stripped
 GameObject:
@@ -4239,7 +4290,7 @@ Transform:
   - {fileID: 2139672785}
   - {fileID: 30716833}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2095168894
 MonoBehaviour:
