@@ -27,6 +27,7 @@ public class MusicBarScript : MonoBehaviour
     private Vector3 endPos;
 
     public bool ContinueSongFlag;
+    public bool TurnOffCameraFlag;
     [SerializeField] private float elapsedTime;
     #endregion
     private void Start()
@@ -36,6 +37,7 @@ public class MusicBarScript : MonoBehaviour
         endPos = _endPos.transform.position;
         transform.position = startPos;
         ContinueSongFlag = false;
+        TurnOffCameraFlag = false;
         //Calucluates how long the bar should take to reach _endPos
         //barSpeed = ((_beatsPerMinute / 60f) * _timeSignature * (_measuresNum - 1)) + ((_beatsPerMinute / 60f) / (_beatsPerMeasure * 2));
     }
@@ -55,6 +57,8 @@ public class MusicBarScript : MonoBehaviour
             transform.position = startPos;
             elapsedTime = 0;
             if(ContinueSongFlag){
+                ContinueSongFlag = false;
+                TurnOffCameraFlag = true;
                 transform.parent.gameObject.SetActive(false);
             }
         }

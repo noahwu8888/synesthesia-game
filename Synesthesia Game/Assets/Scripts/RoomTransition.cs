@@ -8,7 +8,11 @@ public class RoomTransition : MonoBehaviour
     //Reference to transiton rooms
     public GameObject RoomPrev;
     public GameObject RoomNext;
-    public GameObject Player;
+
+    //Reference to Virtual Cameras
+    private GameObject virtualCamPrev;
+    private GameObject virtualCamNext;
+
 
     //Reference to MoveOnFlag
     private RoomManager RoomManagerPrev;
