@@ -8,7 +8,7 @@
 			<value>Note Test</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{6cb65f5b-f814-4c01-8dd6-e600595eccba}</destination>
@@ -60,7 +60,14 @@
 			<destination>{029850a9-4390-4f8b-a38d-31bc82200a41}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{599fb25e-e6a9-4ddd-aa20-e198ca2677b9}" />
+	<object class="EventAutomatableProperties" id="{599fb25e-e6a9-4ddd-aa20-e198ca2677b9}">
+		<property name="minimumDistance">
+			<value>0</value>
+		</property>
+		<property name="maximumDistance">
+			<value>9400</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{1a5a1ffd-c9f6-425d-abfd-f81d5484ebf7}" />
 	<object class="MarkerTrack" id="{1a57fddf-2ffa-498a-922f-c909e159abd5}" />
 	<object class="GroupTrack" id="{25416a12-786f-46d2-bc5a-2d07fcf795d0}">
@@ -183,9 +190,17 @@
 	<object class="MixerBusEffectChain" id="{c52a9d99-3f63-47bf-933a-b96deaf6265b}">
 		<relationship name="effects">
 			<destination>{20d8097e-c165-4372-8c20-994652123a17}</destination>
+			<destination>{f5502eab-19e6-49fc-92b1-b34c81cff0ca}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{607b169d-308c-46c3-990e-13be62b16658}" />
+	<object class="MixerBusPanner" id="{607b169d-308c-46c3-990e-13be62b16658}">
+		<property name="surroundPanDirection">
+			<value>110.556046</value>
+		</property>
+		<property name="surroundPanExtent">
+			<value>358.406372</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{9136baa4-fe67-4c4d-9463-3bc188546d6d}" />
 	<object class="MixerBusEffectChain" id="{1aec7bca-ebe4-49f2-9706-2070775bf299}">
 		<relationship name="effects">
@@ -216,5 +231,19 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{20d8097e-c165-4372-8c20-994652123a17}" />
+	<object class="SpatialiserEffect" id="{f5502eab-19e6-49fc-92b1-b34c81cff0ca}">
+		<property name="distanceRolloffType">
+			<value>1</value>
+		</property>
+		<property name="minimumDistance">
+			<value>0</value>
+		</property>
+		<property name="maximumDistance">
+			<value>9400</value>
+		</property>
+		<property name="extentMode">
+			<value>1</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{4d0f6959-d15e-48b5-9391-3ca86bb8c58a}" />
 </objects>

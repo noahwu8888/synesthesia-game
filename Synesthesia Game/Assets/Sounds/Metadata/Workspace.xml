@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Workspace" id="{e8cd3ab0-f853-46c0-8683-9eef68c6f06c}">
 		<property name="builtBanksOutputDirectory">
-			<value>../../Platformer/synesthesia-game/Synesthesia Game/Assets/FMODBanks/Desktop</value>
+			<value>Banks</value>
 		</property>
 		<property name="builtBanksSeparateAssets">
 			<value>true</value>

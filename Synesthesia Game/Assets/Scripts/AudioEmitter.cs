@@ -1,8 +1,14 @@
 using UnityEngine;
 using System.Collections.Generic;
+using FMODUnity;
 
+[RequireComponent(typeof(StudioEventEmitter))]
 public class AudioEmitter : MonoBehaviour
 {
+    public static AudioEmitter instance { get; private set; }
+
+    private StudioEventEmitter emitter;
+
     [System.Serializable]
     public class RoomInfo
     {
@@ -13,6 +19,18 @@ public class AudioEmitter : MonoBehaviour
 
     public List<RoomInfo> roomList = new List<RoomInfo>();
 
+    public int currentRoom;
+
+
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogError("Duplicate Audio Emitter Found");
+        }
+        instance = this;
+        currentRoom = 1;
+    }
     private void Start()
     {
         foreach (RoomInfo roomInfo in roomList)
@@ -30,5 +48,9 @@ public class AudioEmitter : MonoBehaviour
                 Debug.LogError("Start or End position not found for room: " + roomInfo.roomObject.name);
             }
         }
+
+        emitter = AudioManager.instance.InitializeEventEmitter(FMODEvents.instance.levelEvent, this.gameObject);
     }
+
+
 }

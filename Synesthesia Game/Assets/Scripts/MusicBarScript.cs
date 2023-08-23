@@ -56,7 +56,8 @@ public class MusicBarScript : MonoBehaviour
         {
             transform.position = startPos;
             elapsedTime = 0;
-            if(ContinueSongFlag){
+            if (ContinueSongFlag)
+            {
                 ContinueSongFlag = false;
                 TurnOffCameraFlag = true;
                 transform.parent.gameObject.SetActive(false);
@@ -69,7 +70,7 @@ public class MusicBarScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Music Logic")
         {
-            _audioSource.transform.position = new Vector3(transform.position.x, other.transform.position.y, 0);
+            AudioEmitter.instance.transform.position = new Vector3(transform.position.x, other.transform.position.y, 0);
         }
 
     }
