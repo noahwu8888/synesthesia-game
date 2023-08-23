@@ -356,6 +356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   virtualCam: {fileID: 2078903733}
   MusicLogic: {fileID: 1143440747}
+  TurnOffCameraFlag: 0
 --- !u!60 &345684454
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1246,6 +1247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1423912530}
   - component: {fileID: 1423912529}
+  - component: {fileID: 1423912531}
   m_Layer: 0
   m_Name: Audio Manager
   m_TagString: Untagged
@@ -1270,6 +1272,7 @@ MonoBehaviour:
   Banks:
   - Desktop/Background
   - Desktop/Level
+  - Desktop/PlayerSounds
   CollisionTag: 
   PreloadSamples: 0
 --- !u!4 &1423912530
@@ -1283,10 +1286,23 @@ Transform:
   m_LocalPosition: {x: -30.059578, y: 7.640773, z: 0.44187802}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1907553542}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1423912531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423912528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aed32951eb6a3a43a3f5ee0a664c652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1640252450
 GameObject:
   m_ObjectHideFlags: 0
@@ -1366,6 +1382,57 @@ Transform:
   m_Father: {fileID: 345684455}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1907553541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1907553542}
+  - component: {fileID: 1907553543}
+  m_Layer: 0
+  m_Name: FMOD Events
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1907553542
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907553541}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1423912530}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1907553543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907553541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef48dba9a17cf643b411d00872f57e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <LevelEvent>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &1937843621
 GameObject:
   m_ObjectHideFlags: 0
@@ -4305,6 +4372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   virtualCam: {fileID: 30716831}
   MusicLogic: {fileID: 905586718}
+  TurnOffCameraFlag: 0
 --- !u!1 &2139672784
 GameObject:
   m_ObjectHideFlags: 0
