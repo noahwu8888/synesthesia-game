@@ -29,34 +29,45 @@ public class RoomTransition : MonoBehaviour
     }
 
 
-    void Update(){
-        if(StartNextRoom){
-            if(!RoomManagerPrev.isMusicLogicActive()){
+    void Update()
+    {
+        if (StartNextRoom)
+        {
+            if (!RoomManagerPrev.isMusicLogicActive())
+            {
                 RoomManagerNext.continueSongEnter();
-                StartNextRoom = false;                
+                StartNextRoom = false;
             }
         }
-        if(StartPrevRoom){
-            if(!RoomManagerNext.isMusicLogicActive()){
+        if (StartPrevRoom)
+        {
+            if (!RoomManagerNext.isMusicLogicActive())
+            {
                 RoomManagerPrev.continueSongEnter();
                 StartPrevRoom = false;
             }
         }
     }
-    // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && other.isTrigger){
-        //Move to next room
+        if (other.CompareTag("Player") && other.isTrigger)
+        {
+            //Move to next room
             if (!RoomManagerNext.isMusicLogicActive())
             {
                 RoomManagerPrev.continueSongLeave();
 
+                AudioEmitter.instance.currentRoom++;
+
+
                 StartNextRoom = true;
             }
             //Move to prev room
-            else{
+            else
+            {
                 RoomManagerNext.continueSongLeave();
+
+                AudioEmitter.instance.currentRoom--;
 
                 StartPrevRoom = true;
 

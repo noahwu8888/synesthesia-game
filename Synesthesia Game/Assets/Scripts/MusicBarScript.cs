@@ -10,7 +10,6 @@ public class MusicBarScript : MonoBehaviour
     public GameObject _endPos;
 
     public GameObject _audioSource;
-    private AudioSourceScript audioSourceScript;
 
     #endregion
 
@@ -32,12 +31,13 @@ public class MusicBarScript : MonoBehaviour
     #endregion
     private void Start()
     {
-        audioSourceScript = _audioSource.GetComponent<AudioSourceScript>();
         startPos = _startPos.transform.position;
         endPos = _endPos.transform.position;
         transform.position = startPos;
         ContinueSongFlag = false;
         TurnOffCameraFlag = false;
+       
+
         //Calucluates how long the bar should take to reach _endPos
         //barSpeed = ((_beatsPerMinute / 60f) * _timeSignature * (_measuresNum - 1)) + ((_beatsPerMinute / 60f) / (_beatsPerMeasure * 2));
     }

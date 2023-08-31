@@ -6,6 +6,7 @@ public class RoomManager : MonoBehaviour
 {
     public GameObject virtualCam;
     public GameObject MusicLogic;
+    public int roomNumber;
     private MusicBarScript MusicBar;
 
     public bool TurnOffCameraFlag;
@@ -16,9 +17,11 @@ public class RoomManager : MonoBehaviour
         //MusicBar = MusicLogic.transform.GetChild(2).gameObject.GetComponent<MusicBarScript>();
 
     }
-    private void Update(){
+    private void Update()
+    {
         //Looks for Turn Off Camera Flag, if true, disable camera once music loop reaches end, then set false.
-        if (MusicBar.TurnOffCameraFlag){
+        if (MusicBar.TurnOffCameraFlag)
+        {
             virtualCam.SetActive(false);
             MusicBar.TurnOffCameraFlag = false;
         }
@@ -38,7 +41,9 @@ public class RoomManager : MonoBehaviour
     public void continueSongEnter()
     {
         MusicBar.ContinueSongFlag = false;
+
         MusicLogic.SetActive(true);
+
 
         virtualCam.SetActive(true);
 

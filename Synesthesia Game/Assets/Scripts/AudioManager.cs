@@ -9,7 +9,6 @@ public class AudioManager : MonoBehaviour
     private List<EventInstance> eventInstances;
     private List<StudioEventEmitter> eventEmitters;
 
-
     public static AudioManager instance { get; private set; }
 
     private void Awake()

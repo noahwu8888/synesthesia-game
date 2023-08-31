@@ -7,7 +7,7 @@ public class AudioEmitter : MonoBehaviour
 {
     public static AudioEmitter instance { get; private set; }
 
-    private StudioEventEmitter emitter;
+    public StudioEventEmitter emitter;
 
     [System.Serializable]
     public class RoomInfo
@@ -50,6 +50,15 @@ public class AudioEmitter : MonoBehaviour
         }
 
         emitter = AudioManager.instance.InitializeEventEmitter(FMODEvents.instance.levelEvent, this.gameObject);
+    }
+    private void Update()
+    {
+        SetRoomNumber(currentRoom);
+    }
+
+    public void SetRoomNumber(float parameterValue)
+    {
+        emitter.SetParameter("Room Number", parameterValue, false);
     }
 
 
