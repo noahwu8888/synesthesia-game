@@ -50,8 +50,10 @@ public class AudioEmitter : MonoBehaviour
         }
 
         emitter = AudioManager.instance.InitializeEventEmitter(FMODEvents.instance.levelEvent, this.gameObject);
+        StartEmitter();
+
     }
-    private void Update()
+    private void FixedUpdate()
     {
         SetRoomNumber(currentRoom);
     }
@@ -61,5 +63,9 @@ public class AudioEmitter : MonoBehaviour
         emitter.SetParameter("Room Number", parameterValue, false);
     }
 
+    public void StartEmitter()
+    {
+        emitter.Play();
+    }
 
 }

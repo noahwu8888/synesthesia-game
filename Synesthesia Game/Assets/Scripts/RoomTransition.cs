@@ -19,6 +19,8 @@ public class RoomTransition : MonoBehaviour
     private RoomManager RoomManagerNext;
 
     private bool StartNextRoom, StartPrevRoom;
+
+
     // Start is called before the first frame update
     void Start()
     {

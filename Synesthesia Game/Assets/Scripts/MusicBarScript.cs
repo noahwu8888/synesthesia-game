@@ -36,8 +36,6 @@ public class MusicBarScript : MonoBehaviour
         transform.position = startPos;
         ContinueSongFlag = false;
         TurnOffCameraFlag = false;
-       
-
         //Calucluates how long the bar should take to reach _endPos
         //barSpeed = ((_beatsPerMinute / 60f) * _timeSignature * (_measuresNum - 1)) + ((_beatsPerMinute / 60f) / (_beatsPerMeasure * 2));
     }
