@@ -9,6 +9,9 @@ public class AudioManager : MonoBehaviour
     private List<EventInstance> eventInstances;
     private List<StudioEventEmitter> eventEmitters;
 
+    //Background Sound Instance
+    public EventInstance backgroundInstance;
+
     public static AudioManager instance { get; private set; }
 
     private void Awake()
@@ -21,7 +24,18 @@ public class AudioManager : MonoBehaviour
         eventInstances = new List<EventInstance>();
         eventEmitters = new List<StudioEventEmitter>();
     }
+    public EventInstance CreateInstance(EventReference eventReference)
+    {
+        EventInstance eventInstance = RuntimeManager.CreateInstance(eventReference);
+        eventInstances.Add(eventInstance);
+        return eventInstance;
+    }
 
+    public void InitializeAmbience(EventReference ambienceEventReference)
+    {
+        backgroundInstance = CreateInstance(ambienceEventReference);
+        backgroundInstance.start();
+    }
     public StudioEventEmitter InitializeEventEmitter(EventReference eventReference, GameObject emitterGamerObject)
     {
 

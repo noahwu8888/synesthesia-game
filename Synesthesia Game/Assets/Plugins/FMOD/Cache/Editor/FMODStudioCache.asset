@@ -1,29 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8914539089012477908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Note Test/Room Number
-  m_EditorClassIdentifier: 
-  Name: Room Number
-  StudioPath: 
-  Min: 1
-  Max: 5
-  Default: 1
-  ID:
-    data1: 3433876025
-    data2: 45361721
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-8158731279249384360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,7 +54,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 7058
---- !u!114 &-6865367044186548015
+--- !u!114 &-7653145756304430287
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,25 +63,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Note Test
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Liminal Notes/Room Number
   m_EditorClassIdentifier: 
-  Path: event:/Note Test
-  Guid:
-    Data1: 1550031629
-    Data2: 1157642233
-    Data3: -664591969
-    Data4: -1936553914
-  Banks:
-  - {fileID: 6502947808753337689}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -8914539089012477908}
-  MinDistance: 0
-  MaxDistance: 9400
-  Length: 59655
+  Name: Room Number
+  StudioPath: 
+  Min: 1
+  Max: 5
+  Default: 1
+  ID:
+    data1: 3433876025
+    data2: 45361721
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-5105479236480580630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,7 +93,7 @@ MonoBehaviour:
   Path: Assets/Sounds/Banks/Desktop/SFX.assets.bank
   Name: Desktop/SFX.assets
   StudioPath: bank:/SFX.assets
-  lastModified: 638291260995087889
+  lastModified: 638297228528157991
   FileSizes: []
   Exists: 1
 --- !u!114 &-4998507592566713024
@@ -139,7 +111,7 @@ MonoBehaviour:
   Path: Assets/Sounds/Banks/Desktop/Master.assets.bank
   Name: Desktop/Master.assets
   StudioPath: bank:/Master.assets
-  lastModified: 638291260995067944
+  lastModified: 638297228528138044
   FileSizes: []
   Exists: 1
 --- !u!114 &-1449861379057269211
@@ -157,7 +129,7 @@ MonoBehaviour:
   Path: Assets/Sounds/Banks/Desktop/Background.assets.bank
   Name: Desktop/Background.assets
   StudioPath: bank:/Background.assets
-  lastModified: 638291260984684508
+  lastModified: 638297228527739120
   FileSizes: []
   Exists: 1
 --- !u!114 &-412011993548509584
@@ -175,7 +147,7 @@ MonoBehaviour:
   Path: Assets/Sounds/Banks/Desktop/SFX.bank
   Name: Desktop/SFX
   StudioPath: bank:/SFX
-  lastModified: 638291260995087889
+  lastModified: 638297228528148011
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -203,13 +175,14 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: -8037621622338403514}
   - {fileID: -8158731279249384360}
-  - {fileID: -6865367044186548015}
+  - {fileID: 4247355438209321660}
+  - {fileID: 4925717865685536517}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3445187120156077738}
   StringsBanks:
   - {fileID: 645176646095359492}
-  cacheTime: 638291260995087889
+  cacheTime: 638297228528157991
   cacheVersion: 131603
 --- !u!114 &645176646095359492
 MonoBehaviour:
@@ -226,10 +199,34 @@ MonoBehaviour:
   Path: Assets/Sounds/Banks/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638291260995077917
+  lastModified: 638297228528138044
   FileSizes:
   - Name: 
-    Value: 1234
+    Value: 1290
+  Exists: 1
+--- !u!114 &2302238950744099145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Liminal Background/Room Number
+  m_EditorClassIdentifier: 
+  Name: Room Number
+  StudioPath: 
+  Min: 1
+  Max: 5
+  Default: 1
+  ID:
+    data1: 3433876025
+    data2: 45361721
+  Type: 1
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &2558689811406903322
 MonoBehaviour:
@@ -246,7 +243,7 @@ MonoBehaviour:
   Path: Assets/Sounds/Banks/Desktop/Level.assets.bank
   Name: Desktop/Level.assets
   StudioPath: bank:/Level.assets
-  lastModified: 638291260995048000
+  lastModified: 638297228528108130
   FileSizes: []
   Exists: 1
 --- !u!114 &3445187120156077738
@@ -264,9 +261,65 @@ MonoBehaviour:
   Path: Assets/Sounds/Banks/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 638291260995057972
+  lastModified: 638297228528128062
   FileSizes: []
   Exists: 1
+--- !u!114 &4247355438209321660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Liminal Background
+  m_EditorClassIdentifier: 
+  Path: event:/Liminal Background
+  Guid:
+    Data1: -1349865024
+    Data2: 1319978114
+    Data3: 1135312026
+    Data4: 588906065
+  Banks:
+  - {fileID: 6099374481671285711}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 2302238950744099145}
+  MinDistance: 0
+  MaxDistance: 9400
+  Length: 56444
+--- !u!114 &4925717865685536517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Liminal Notes
+  m_EditorClassIdentifier: 
+  Path: event:/Liminal Notes
+  Guid:
+    Data1: 1550031629
+    Data2: 1157642233
+    Data3: -664591969
+    Data4: -1936553914
+  Banks:
+  - {fileID: 6502947808753337689}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -7653145756304430287}
+  MinDistance: 0
+  MaxDistance: 9400
+  Length: 57853
 --- !u!114 &6099374481671285711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,7 +335,7 @@ MonoBehaviour:
   Path: Assets/Sounds/Banks/Desktop/Background.bank
   Name: Desktop/Background
   StudioPath: bank:/Background
-  lastModified: 638291260984684508
+  lastModified: 638297228527572852
   FileSizes: []
   Exists: 1
 --- !u!114 &6502947808753337689
@@ -300,6 +353,6 @@ MonoBehaviour:
   Path: Assets/Sounds/Banks/Desktop/Level.bank
   Name: Desktop/Level
   StudioPath: bank:/Level
-  lastModified: 638291260985133361
+  lastModified: 638297228527769038
   FileSizes: []
   Exists: 1

@@ -7,7 +7,8 @@ public class AudioEmitter : MonoBehaviour
 {
     public static AudioEmitter instance { get; private set; }
 
-    public StudioEventEmitter emitter;
+    public StudioEventEmitter levelEmitter;
+
 
     [System.Serializable]
     public class RoomInfo
@@ -26,7 +27,7 @@ public class AudioEmitter : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogError("Duplicate Audio Emitter Found");
+            Debug.LogError("Duplicate Audio levelEmitter Found");
         }
         instance = this;
         currentRoom = 1;
@@ -49,9 +50,9 @@ public class AudioEmitter : MonoBehaviour
             }
         }
 
-        emitter = AudioManager.instance.InitializeEventEmitter(FMODEvents.instance.levelEvent, this.gameObject);
+        levelEmitter = AudioManager.instance.InitializeEventEmitter(FMODEvents.instance.levelEvent, this.gameObject);
+        AudioManager.instance.InitializeAmbience(FMODEvents.instance.backgroundEvent);
         StartEmitter();
-
     }
     private void FixedUpdate()
     {
@@ -60,12 +61,13 @@ public class AudioEmitter : MonoBehaviour
 
     public void SetRoomNumber(float parameterValue)
     {
-        emitter.SetParameter("Room Number", parameterValue, false);
+        levelEmitter.SetParameter("Room Number", parameterValue, false);
+        AudioManager.instance.backgroundInstance.setParameterByName("Room Number", parameterValue, false);
     }
 
     public void StartEmitter()
     {
-        emitter.Play();
+        levelEmitter.Play();
     }
 
 }
