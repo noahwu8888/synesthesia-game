@@ -7,7 +7,6 @@ public class RoomManager : MonoBehaviour
     public int roomNumber;
     public GameObject virtualCam;
     public GameObject MusicLogic;
-    public int roomNumber;
     private MusicBarScript MusicBar;
 
     public bool TurnOffCameraFlag;
