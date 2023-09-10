@@ -3781,6 +3781,10 @@ PrefabInstance:
       propertyPath: barSpeed
       value: 14.118
       objectReference: {fileID: 0}
+    - target: {fileID: 4224940085478843765, guid: 3e1abc1642bd2d3489f0d32b734caa0f, type: 3}
+      propertyPath: _measuresNum
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4224940085478843767, guid: 3e1abc1642bd2d3489f0d32b734caa0f, type: 3}
       propertyPath: m_LocalScale.y
       value: 70
@@ -3966,6 +3970,10 @@ PrefabInstance:
     - target: {fileID: 4224940085478843765, guid: 3e1abc1642bd2d3489f0d32b734caa0f, type: 3}
       propertyPath: barSpeed
       value: 14.118
+      objectReference: {fileID: 0}
+    - target: {fileID: 4224940085478843765, guid: 3e1abc1642bd2d3489f0d32b734caa0f, type: 3}
+      propertyPath: _measuresNum
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4224940085478843767, guid: 3e1abc1642bd2d3489f0d32b734caa0f, type: 3}
       propertyPath: m_LocalScale.y
@@ -13365,6 +13373,10 @@ PrefabInstance:
     - target: {fileID: 4224940085478843765, guid: 3e1abc1642bd2d3489f0d32b734caa0f, type: 3}
       propertyPath: barSpeed
       value: 14.118
+      objectReference: {fileID: 0}
+    - target: {fileID: 4224940085478843765, guid: 3e1abc1642bd2d3489f0d32b734caa0f, type: 3}
+      propertyPath: _measuresNum
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4224940085478843767, guid: 3e1abc1642bd2d3489f0d32b734caa0f, type: 3}
       propertyPath: m_LocalScale.y
