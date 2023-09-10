@@ -280,6 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 116f9d34f1bd28d4db566e377262c061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roomNumber: 0
   virtualCam: {fileID: 2078903733}
   MusicLogic: {fileID: 1143440747}
   roomNumber: 2
@@ -514,7 +515,7 @@ MonoBehaviour:
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
-    m_Time: 2
+    m_Time: 1
     m_CustomCurve:
       serializedVersion: 2
       m_Curve: []

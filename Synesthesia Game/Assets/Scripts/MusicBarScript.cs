@@ -25,7 +25,10 @@ public class MusicBarScript : MonoBehaviour
     private Vector3 startPos;
     private Vector3 endPos;
 
+    //Used in other scripts
+    //Should the music end and move on?
     public bool ContinueSongFlag;
+    //Should the camera of the room turn off?
     public bool TurnOffCameraFlag;
     [SerializeField] private float elapsedTime;
     #endregion

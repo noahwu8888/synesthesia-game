@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RoomManager : MonoBehaviour
 {
+    public int roomNumber;
     public GameObject virtualCam;
     public GameObject MusicLogic;
     public int roomNumber;
