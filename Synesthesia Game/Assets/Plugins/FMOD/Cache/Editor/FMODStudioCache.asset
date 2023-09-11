@@ -93,7 +93,7 @@ MonoBehaviour:
   Path: Assets/Sounds/Banks/Desktop/SFX.assets.bank
   Name: Desktop/SFX.assets
   StudioPath: bank:/SFX.assets
-  lastModified: 638300023780000000
+  lastModified: 638299811825255841
   FileSizes: []
   Exists: 1
 --- !u!114 &-4998507592566713024
@@ -111,7 +111,7 @@ MonoBehaviour:
   Path: Assets/Sounds/Banks/Desktop/Master.assets.bank
   Name: Desktop/Master.assets
   StudioPath: bank:/Master.assets
-  lastModified: 638300023760000000
+  lastModified: 638299811825225999
   FileSizes: []
   Exists: 1
 --- !u!114 &-1449861379057269211
@@ -129,7 +129,7 @@ MonoBehaviour:
   Path: Assets/Sounds/Banks/Desktop/Background.assets.bank
   Name: Desktop/Background.assets
   StudioPath: bank:/Background.assets
-  lastModified: 638300023760000000
+  lastModified: 638299811825001753
   FileSizes: []
   Exists: 1
 --- !u!114 &-412011993548509584
@@ -147,7 +147,7 @@ MonoBehaviour:
   Path: Assets/Sounds/Banks/Desktop/SFX.bank
   Name: Desktop/SFX
   StudioPath: bank:/SFX
-  lastModified: 638300023780000000
+  lastModified: 638299811825245870
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -182,7 +182,7 @@ MonoBehaviour:
   - {fileID: 3445187120156077738}
   StringsBanks:
   - {fileID: 645176646095359492}
-  cacheTime: 638300023780000000
+  cacheTime: 638299811825255841
   cacheVersion: 131603
 --- !u!114 &645176646095359492
 MonoBehaviour:
@@ -199,7 +199,7 @@ MonoBehaviour:
   Path: Assets/Sounds/Banks/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638300023780000000
+  lastModified: 638299811825235898
   FileSizes:
   - Name: 
     Value: 1290
@@ -243,7 +243,7 @@ MonoBehaviour:
   Path: Assets/Sounds/Banks/Desktop/Level.assets.bank
   Name: Desktop/Level.assets
   StudioPath: bank:/Level.assets
-  lastModified: 638300023780000000
+  lastModified: 638299811825211196
   FileSizes: []
   Exists: 1
 --- !u!114 &3445187120156077738
@@ -261,7 +261,7 @@ MonoBehaviour:
   Path: Assets/Sounds/Banks/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 638300023780000000
+  lastModified: 638299811825225999
   FileSizes: []
   Exists: 1
 --- !u!114 &4247355438209321660
@@ -335,7 +335,7 @@ MonoBehaviour:
   Path: Assets/Sounds/Banks/Desktop/Background.bank
   Name: Desktop/Background
   StudioPath: bank:/Background
-  lastModified: 638300023760000000
+  lastModified: 638299811824832209
   FileSizes: []
   Exists: 1
 --- !u!114 &6502947808753337689
@@ -353,6 +353,6 @@ MonoBehaviour:
   Path: Assets/Sounds/Banks/Desktop/Level.bank
   Name: Desktop/Level
   StudioPath: bank:/Level
-  lastModified: 638300023760000000
+  lastModified: 638299811825051625
   FileSizes: []
   Exists: 1
