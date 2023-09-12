@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Music Logic
+  - Gates
+  - Room
   layers:
   - Default
   - TransparentFX
@@ -12,7 +14,7 @@ TagManager:
   - Music Logic
   - Water
   - UI
-  - 
+  - Overlay
   - 
   - 
   - 
@@ -41,4 +43,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Overlay
+    uniqueID: 4152966487
+    locked: 0
+  - name: Always Visible
+    uniqueID: 4146181931
     locked: 0
