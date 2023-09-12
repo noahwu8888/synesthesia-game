@@ -7,6 +7,9 @@ public class RoomManager : MonoBehaviour
     public int roomNumber;
     public GameObject virtualCam;
     public GameObject MusicLogic;
+
+    public GameObject respawnPoint;
+    private GameObject player;
     private MusicBarScript MusicBar;
 
     public bool TurnOffCameraFlag;
@@ -15,6 +18,7 @@ public class RoomManager : MonoBehaviour
     {
         MusicBar = GetComponentInChildren<MusicBarScript>(true);
         //MusicBar = MusicLogic.transform.GetChild(2).gameObject.GetComponent<MusicBarScript>();
+        player = GameObject.FindWithTag("Player");
 
     }
     private void Update()
@@ -47,6 +51,13 @@ public class RoomManager : MonoBehaviour
 
         virtualCam.SetActive(true);
 
+    }
+    public void respawnCharacter()
+    {
+        if (isMusicLogicActive())
+        {
+            player.transform.position = respawnPoint.transform.position;
+        }
     }
 
 
