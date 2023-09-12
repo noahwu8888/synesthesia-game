@@ -9,7 +9,7 @@ public class RoomManager : MonoBehaviour
     public GameObject MusicLogic;
 
     public GameObject respawnPoint;
-    private GameObject player;
+    [SerializeField] private GameObject player;
     private MusicBarScript MusicBar;
 
     public bool TurnOffCameraFlag;
