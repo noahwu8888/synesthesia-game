@@ -63,15 +63,15 @@ path = "bank:/SFX.assets"
 guid = "{123bcd1a-c2e7-07ab-1e47-b1739d7c28b7}"
 name = "SFX.assets"
 
-[sub_resource type="BusAsset" id="BusAsset_ip25r"]
-path = "bus:/"
-guid = "{029850a9-4390-4f8b-a38d-31bc82200a41}"
-name = "Master"
-
 [sub_resource type="BusAsset" id="BusAsset_582ts"]
 path = "bus:/Reverb"
 guid = "{fcb0ec61-cad4-436c-9efc-903a7cd09ca0}"
 name = "Reverb"
+
+[sub_resource type="BusAsset" id="BusAsset_ip25r"]
+path = "bus:/"
+guid = "{029850a9-4390-4f8b-a38d-31bc82200a41}"
+name = "Master"
 
 [sub_resource type="EventAsset" id="EventAsset_cquee"]
 is_3d = true
