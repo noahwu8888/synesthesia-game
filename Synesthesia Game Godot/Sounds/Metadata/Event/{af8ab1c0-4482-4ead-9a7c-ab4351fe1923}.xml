@@ -33,6 +33,7 @@
 		</relationship>
 		<relationship name="groupTracks">
 			<destination>{36b4e7aa-2b11-4de2-a382-f1a17e19f585}</destination>
+			<destination>{e270b913-bc4f-48f9-8a25-edbae483e84d}</destination>
 		</relationship>
 		<relationship name="timeline">
 			<destination>{a61c5d83-c416-48d8-949f-eedec0b06551}</destination>
@@ -80,6 +81,11 @@
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{75462887-6172-431a-a1ca-b64037226c7d}</destination>
+		</relationship>
+	</object>
+	<object class="GroupTrack" id="{e270b913-bc4f-48f9-8a25-edbae483e84d}">
+		<relationship name="mixerGroup">
+			<destination>{d074a682-5388-4447-85b7-a1b2afea98e0}</destination>
 		</relationship>
 	</object>
 	<object class="Timeline" id="{a61c5d83-c416-48d8-949f-eedec0b06551}">
@@ -141,6 +147,20 @@
 		</relationship>
 		<relationship name="panner">
 			<destination>{29a26f6d-95ef-4527-9cf9-78ff0a207211}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{c87bdf72-bd5a-4ad3-825e-61c103dbe5c1}</destination>
+		</relationship>
+	</object>
+	<object class="EventMixerGroup" id="{d074a682-5388-4447-85b7-a1b2afea98e0}">
+		<property name="name">
+			<value>Audio 2</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{f27f0ab5-d98e-4a3b-aec9-be7a277f9702}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{ab2b778f-455e-47ce-a790-3506d5d1ba61}</destination>
 		</relationship>
 		<relationship name="output">
 			<destination>{c87bdf72-bd5a-4ad3-825e-61c103dbe5c1}</destination>
@@ -457,6 +477,12 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{29a26f6d-95ef-4527-9cf9-78ff0a207211}" />
+	<object class="MixerBusEffectChain" id="{f27f0ab5-d98e-4a3b-aec9-be7a277f9702}">
+		<relationship name="effects">
+			<destination>{5809c863-3e8e-499e-a54b-b7d534fd1395}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{ab2b778f-455e-47ce-a790-3506d5d1ba61}" />
 	<object class="ParameterCondition" id="{73e8079e-dcea-476e-a5d0-3ef39ef490c0}">
 		<property name="minimum">
 			<value>2</value>
@@ -602,4 +628,5 @@
 	</object>
 	<object class="MixerBusFader" id="{1f3623fe-9b34-43e7-bb75-e516b8dc84bd}" />
 	<object class="MixerBusFader" id="{53f1a631-008c-45f8-88bd-3843442be098}" />
+	<object class="MixerBusFader" id="{5809c863-3e8e-499e-a54b-b7d534fd1395}" />
 </objects>
