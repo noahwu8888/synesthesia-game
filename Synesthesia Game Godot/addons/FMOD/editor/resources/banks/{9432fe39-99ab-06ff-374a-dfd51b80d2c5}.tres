@@ -1,0 +1,8 @@
+[gd_resource type="BankAsset" format=3 uid="uid://c7hw7wk1gray7"]
+
+[resource]
+file_path = "res://Sounds/Banks/Desktop/Level.assets.bank"
+modified_time = 1695067293
+path = "bank:/Level.assets"
+guid = "{9432fe39-99ab-06ff-374a-dfd51b80d2c5}"
+name = "Level.assets"

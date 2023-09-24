@@ -1,0 +1,8 @@
+[gd_resource type="BankAsset" format=3 uid="uid://bqkdm5oioq0fb"]
+
+[resource]
+file_path = "res://Sounds/Banks/Desktop/SFX.assets.bank"
+modified_time = 1695067293
+path = "bank:/SFX.assets"
+guid = "{123bcd1a-c2e7-07ab-1e47-b1739d7c28b7}"
+name = "SFX.assets"

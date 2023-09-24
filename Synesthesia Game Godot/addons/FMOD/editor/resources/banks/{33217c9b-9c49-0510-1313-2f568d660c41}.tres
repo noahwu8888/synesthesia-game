@@ -1,0 +1,8 @@
+[gd_resource type="BankAsset" format=3 uid="uid://c67afd6t6h18o"]
+
+[resource]
+file_path = "res://Sounds/Banks/Desktop/Background.assets.bank"
+modified_time = 1695067293
+path = "bank:/Background.assets"
+guid = "{33217c9b-9c49-0510-1313-2f568d660c41}"
+name = "Background.assets"

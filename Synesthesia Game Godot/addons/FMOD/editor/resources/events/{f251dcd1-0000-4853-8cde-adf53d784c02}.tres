@@ -1,0 +1,9 @@
+[gd_resource type="EventAsset" format=3 uid="uid://bu8ok7e6w4bqj"]
+
+[resource]
+is_3d = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/First 3 Notes"
+guid = "{f251dcd1-0000-4853-8cde-adf53d784c02}"
+name = "First 3 Notes"

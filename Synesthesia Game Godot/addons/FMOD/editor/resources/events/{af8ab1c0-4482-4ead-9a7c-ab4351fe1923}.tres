@@ -1,0 +1,29 @@
+[gd_resource type="EventAsset" load_steps=4 format=3 uid="uid://o023157yqpug"]
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_8grvw"]
+data1 = 3433876025
+data2 = 45361721
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_wrhgf"]
+name = "Room Number"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_8grvw")
+minimum = 1.0
+maximum = 5.0
+default_value = 1.0
+flags = 8
+guid = "{53ba8a21-e626-4bc9-96d4-448965388087}"
+
+[sub_resource type="ParameterAsset" id="ParameterAsset_wkhd8"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_wrhgf")
+path = "parameter:/Room Number"
+guid = "{53ba8a21-e626-4bc9-96d4-448965388087}"
+name = "Room Number"
+
+[resource]
+max_distance = 9400.0
+parameters = {
+"{53ba8a21-e626-4bc9-96d4-448965388087}": SubResource("ParameterAsset_wkhd8")
+}
+path = "event:/Liminal Background"
+guid = "{af8ab1c0-4482-4ead-9a7c-ab4351fe1923}"
+name = "Liminal Background"

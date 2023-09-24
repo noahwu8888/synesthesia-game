@@ -1,0 +1,6 @@
+[gd_resource type="BusAsset" format=3 uid="uid://cyial42hl4jhs"]
+
+[resource]
+path = "bus:/Reverb"
+guid = "{fcb0ec61-cad4-436c-9efc-903a7cd09ca0}"
+name = "Reverb"

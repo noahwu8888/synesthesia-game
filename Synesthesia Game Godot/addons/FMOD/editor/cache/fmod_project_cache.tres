@@ -1,0 +1,263 @@
+[gd_resource type="ProjectCache" load_steps=22 format=3 uid="uid://b74jxlxpvlrjt"]
+
+[sub_resource type="BankAsset" id="BankAsset_h5f38"]
+file_path = "res://Sounds/Banks/Desktop/Background.bank"
+modified_time = 1695067293
+path = "bank:/Background"
+guid = "{88de2fe1-2d20-4520-8950-e7db41ca0981}"
+name = "Background"
+
+[sub_resource type="BankAsset" id="BankAsset_x8gla"]
+file_path = "res://Sounds/Banks/Desktop/Background.assets.bank"
+modified_time = 1695067293
+path = "bank:/Background.assets"
+guid = "{33217c9b-9c49-0510-1313-2f568d660c41}"
+name = "Background.assets"
+
+[sub_resource type="BankAsset" id="BankAsset_vbdp8"]
+file_path = "res://Sounds/Banks/Desktop/Level.bank"
+modified_time = 1695067293
+path = "bank:/Level"
+guid = "{2fcdad43-28c2-46cf-ad09-1758d72cd705}"
+name = "Level"
+
+[sub_resource type="BankAsset" id="BankAsset_xghre"]
+file_path = "res://Sounds/Banks/Desktop/Level.assets.bank"
+modified_time = 1695067293
+path = "bank:/Level.assets"
+guid = "{9432fe39-99ab-06ff-374a-dfd51b80d2c5}"
+name = "Level.assets"
+
+[sub_resource type="BankAsset" id="BankAsset_welgj"]
+file_path = "res://Sounds/Banks/Desktop/Master.bank"
+modified_time = 1695067293
+path = "bank:/Master"
+guid = "{c0f9df84-d112-460a-aaf3-94c1f73df78e}"
+name = "Master"
+
+[sub_resource type="BankAsset" id="BankAsset_y3oh2"]
+file_path = "res://Sounds/Banks/Desktop/Master.assets.bank"
+modified_time = 1695067293
+path = "bank:/Master.assets"
+guid = "{7b068cfe-607b-063a-30b0-5c4c3b91f24e}"
+name = "Master.assets"
+
+[sub_resource type="BankAsset" id="BankAsset_f0y63"]
+file_path = "res://Sounds/Banks/Desktop/Master.strings.bank"
+modified_time = 1695067293
+path = "bank:/Master.strings"
+guid = "{58e4ff50-a069-0a48-2cba-1e3f06cef116}"
+name = "Master.strings"
+
+[sub_resource type="BankAsset" id="BankAsset_rc0as"]
+file_path = "res://Sounds/Banks/Desktop/SFX.bank"
+modified_time = 1695067293
+path = "bank:/SFX"
+guid = "{a9c49e60-738e-479b-8404-79fe51d02d77}"
+name = "SFX"
+
+[sub_resource type="BankAsset" id="BankAsset_lx4ws"]
+file_path = "res://Sounds/Banks/Desktop/SFX.assets.bank"
+modified_time = 1695067293
+path = "bank:/SFX.assets"
+guid = "{123bcd1a-c2e7-07ab-1e47-b1739d7c28b7}"
+name = "SFX.assets"
+
+[sub_resource type="BusAsset" id="BusAsset_ip25r"]
+path = "bus:/"
+guid = "{029850a9-4390-4f8b-a38d-31bc82200a41}"
+name = "Master"
+
+[sub_resource type="BusAsset" id="BusAsset_582ts"]
+path = "bus:/Reverb"
+guid = "{fcb0ec61-cad4-436c-9efc-903a7cd09ca0}"
+name = "Reverb"
+
+[sub_resource type="EventAsset" id="EventAsset_cquee"]
+is_3d = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/First 3 Notes"
+guid = "{f251dcd1-0000-4853-8cde-adf53d784c02}"
+name = "First 3 Notes"
+
+[sub_resource type="EventAsset" id="EventAsset_2cdgj"]
+is_3d = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/First Note"
+guid = "{858bc94d-3b21-4b1c-9ea1-dfbb9a6ee3bc}"
+name = "First Note"
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_8grvw"]
+data1 = 3433876025
+data2 = 45361721
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_wrhgf"]
+name = "Room Number"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_8grvw")
+minimum = 1.0
+maximum = 5.0
+default_value = 1.0
+flags = 8
+guid = "{53ba8a21-e626-4bc9-96d4-448965388087}"
+
+[sub_resource type="ParameterAsset" id="ParameterAsset_wkhd8"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_wrhgf")
+path = "parameter:/Room Number"
+guid = "{53ba8a21-e626-4bc9-96d4-448965388087}"
+name = "Room Number"
+
+[sub_resource type="EventAsset" id="EventAsset_y0u7c"]
+max_distance = 9400.0
+parameters = {
+"{53ba8a21-e626-4bc9-96d4-448965388087}": SubResource("ParameterAsset_wkhd8")
+}
+path = "event:/Liminal Background"
+guid = "{af8ab1c0-4482-4ead-9a7c-ab4351fe1923}"
+name = "Liminal Background"
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_dys8m"]
+data1 = 3433876025
+data2 = 45361721
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_vvcvr"]
+name = "Room Number"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_dys8m")
+minimum = 1.0
+maximum = 5.0
+default_value = 1.0
+flags = 8
+guid = "{53ba8a21-e626-4bc9-96d4-448965388087}"
+
+[sub_resource type="ParameterAsset" id="ParameterAsset_rpr76"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_vvcvr")
+path = "parameter:/Room Number"
+guid = "{53ba8a21-e626-4bc9-96d4-448965388087}"
+name = "Room Number"
+
+[sub_resource type="EventAsset" id="EventAsset_fjen0"]
+is_3d = true
+max_distance = 100.0
+parameters = {
+"{53ba8a21-e626-4bc9-96d4-448965388087}": SubResource("ParameterAsset_rpr76")
+}
+path = "event:/Liminal Notes"
+guid = "{5c639b0d-37f9-4500-9f21-63d84688928c}"
+name = "Liminal Notes"
+
+[resource]
+banks = {
+"{123bcd1a-c2e7-07ab-1e47-b1739d7c28b7}": SubResource("BankAsset_lx4ws"),
+"{2fcdad43-28c2-46cf-ad09-1758d72cd705}": SubResource("BankAsset_vbdp8"),
+"{33217c9b-9c49-0510-1313-2f568d660c41}": SubResource("BankAsset_x8gla"),
+"{58e4ff50-a069-0a48-2cba-1e3f06cef116}": SubResource("BankAsset_f0y63"),
+"{7b068cfe-607b-063a-30b0-5c4c3b91f24e}": SubResource("BankAsset_y3oh2"),
+"{88de2fe1-2d20-4520-8950-e7db41ca0981}": SubResource("BankAsset_h5f38"),
+"{9432fe39-99ab-06ff-374a-dfd51b80d2c5}": SubResource("BankAsset_xghre"),
+"{a9c49e60-738e-479b-8404-79fe51d02d77}": SubResource("BankAsset_rc0as"),
+"{c0f9df84-d112-460a-aaf3-94c1f73df78e}": SubResource("BankAsset_welgj")
+}
+events = {
+"{5c639b0d-37f9-4500-9f21-63d84688928c}": SubResource("EventAsset_fjen0"),
+"{858bc94d-3b21-4b1c-9ea1-dfbb9a6ee3bc}": SubResource("EventAsset_2cdgj"),
+"{af8ab1c0-4482-4ead-9a7c-ab4351fe1923}": SubResource("EventAsset_y0u7c"),
+"{f251dcd1-0000-4853-8cde-adf53d784c02}": SubResource("EventAsset_cquee")
+}
+busses = {
+"{029850a9-4390-4f8b-a38d-31bc82200a41}": SubResource("BusAsset_ip25r"),
+"{fcb0ec61-cad4-436c-9efc-903a7cd09ca0}": SubResource("BusAsset_582ts")
+}
+bank_tree = [{
+"children": [],
+"item_type": 3,
+"node_name": "Background",
+"path": "bank:/Background",
+"resource": SubResource("BankAsset_h5f38")
+}, {
+"children": [],
+"item_type": 3,
+"node_name": "Background.assets",
+"path": "bank:/Background.assets",
+"resource": SubResource("BankAsset_x8gla")
+}, {
+"children": [],
+"item_type": 3,
+"node_name": "Level",
+"path": "bank:/Level",
+"resource": SubResource("BankAsset_vbdp8")
+}, {
+"children": [],
+"item_type": 3,
+"node_name": "Level.assets",
+"path": "bank:/Level.assets",
+"resource": SubResource("BankAsset_xghre")
+}, {
+"children": [],
+"item_type": 3,
+"node_name": "Master",
+"path": "bank:/Master",
+"resource": SubResource("BankAsset_welgj")
+}, {
+"children": [],
+"item_type": 3,
+"node_name": "Master.assets",
+"path": "bank:/Master.assets",
+"resource": SubResource("BankAsset_y3oh2")
+}, {
+"children": [],
+"item_type": 3,
+"node_name": "Master.strings",
+"path": "bank:/Master.strings",
+"resource": SubResource("BankAsset_f0y63")
+}, {
+"children": [],
+"item_type": 3,
+"node_name": "SFX",
+"path": "bank:/SFX",
+"resource": SubResource("BankAsset_rc0as")
+}, {
+"children": [],
+"item_type": 3,
+"node_name": "SFX.assets",
+"path": "bank:/SFX.assets",
+"resource": SubResource("BankAsset_lx4ws")
+}]
+event_tree = [{
+"children": [],
+"item_type": 1,
+"node_name": "First 3 Notes",
+"path": "event:/First 3 Notes",
+"resource": SubResource("EventAsset_cquee")
+}, {
+"children": [],
+"item_type": 1,
+"node_name": "First Note",
+"path": "event:/First Note",
+"resource": SubResource("EventAsset_2cdgj")
+}, {
+"children": [],
+"item_type": 1,
+"node_name": "Liminal Background",
+"path": "event:/Liminal Background",
+"resource": SubResource("EventAsset_y0u7c")
+}, {
+"children": [],
+"item_type": 1,
+"node_name": "Liminal Notes",
+"path": "event:/Liminal Notes",
+"resource": SubResource("EventAsset_fjen0")
+}]
+bus_tree = [{
+"children": [{
+"children": [],
+"item_type": 4,
+"node_name": "Reverb",
+"path": "bus:/Reverb",
+"resource": SubResource("BusAsset_582ts")
+}],
+"item_type": 4,
+"node_name": "bus:",
+"path": "bus:/",
+"resource": SubResource("BusAsset_ip25r")
+}]
