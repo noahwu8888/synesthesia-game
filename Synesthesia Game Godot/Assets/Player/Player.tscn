@@ -16,3 +16,5 @@ hframes = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_d0qv1")
 one_way_collision_margin = 0.0
+
+[node name="StudioListener2D" type="StudioListener2D" parent="."]
