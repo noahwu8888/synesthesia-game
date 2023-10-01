@@ -17,7 +17,6 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-FMODRuntime="*res://addons/FMOD/runtime/runtime_manager.gd"
 RuntimeManager="*res://addons/FMOD/runtime/runtime_manager.gd"
 
 [editor_plugins]
@@ -76,3 +75,7 @@ ui_down={
 , Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":1.0,"script":null)
 ]
 }
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
