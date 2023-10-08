@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bf51a8sj38xdq"]
+[gd_scene load_steps=16 format=3 uid="uid://bf51a8sj38xdq"]
 
 [ext_resource type="BankAsset" uid="uid://shbrg3pqq124" path="res://addons/FMOD/editor/resources/banks/{c0f9df84-d112-460a-aaf3-94c1f73df78e}.tres" id="1_clel4"]
 [ext_resource type="BankAsset" uid="uid://cxl836xg4tmvi" path="res://addons/FMOD/editor/resources/banks/{7b068cfe-607b-063a-30b0-5c4c3b91f24e}.tres" id="2_h2jxb"]
@@ -1443,8 +1443,10 @@ texture = ExtResource("9_3rq1j")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_sa5k4")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_70d3e"]
-size = Vector2(70, 1000)
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ejf07"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrk3c"]
+size = Vector2(50, 500)
 
 [node name="World" type="Node2D"]
 
@@ -1478,10 +1480,17 @@ preload_samples = true
 "parameter_Room Number" = 5.0
 position = Vector2(120, 0)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("RectangleShape2D_70d3e")
-debug_color = Color(0, 0.6, 0.701961, 0.419608)
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-203, -9)
 script = ExtResource("11_73hg8")
 direction = Vector2(50, 2.08165e-12)
+beatsPerMinute = 132
+beatsPerMeasure = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(50, 500)
+texture = SubResource("PlaceholderTexture2D_ejf07")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_xrk3c")
