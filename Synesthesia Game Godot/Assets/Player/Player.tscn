@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bsl6o7vfojdt5"]
 
-[ext_resource type="Script" path="res://Assets/Player/Player.gd" id="1_kry4x"]
+[ext_resource type="Script" path="res://Scripts/Player/Player.gd" id="1_y4cla"]
 [ext_resource type="Texture2D" uid="uid://c7cmg172pecf2" path="res://Art/Legacy-Fantasy - High Forest 2.3/Character/Idle/Idle-Sheet.png" id="2_tjap5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d0qv1"]
@@ -8,7 +8,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uxsky"]
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_kry4x")
+script = ExtResource("1_y4cla")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 position = Vector2(0, -8)

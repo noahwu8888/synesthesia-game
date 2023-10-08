@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://8cau2oce53bi"]
+[gd_scene load_steps=16 format=3 uid="uid://bf51a8sj38xdq"]
 
 [ext_resource type="BankAsset" uid="uid://shbrg3pqq124" path="res://addons/FMOD/editor/resources/banks/{c0f9df84-d112-460a-aaf3-94c1f73df78e}.tres" id="1_clel4"]
 [ext_resource type="BankAsset" uid="uid://cxl836xg4tmvi" path="res://addons/FMOD/editor/resources/banks/{7b068cfe-607b-063a-30b0-5c4c3b91f24e}.tres" id="2_h2jxb"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bsl6o7vfojdt5" path="res://Assets/Player/Player.tscn" id="8_ond63"]
 [ext_resource type="Texture2D" uid="uid://db32cpjkdl4as" path="res://Art/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png" id="9_3rq1j"]
 [ext_resource type="EventAsset" uid="uid://o023157yqpug" path="res://addons/FMOD/editor/resources/events/{af8ab1c0-4482-4ead-9a7c-ab4351fe1923}.tres" id="10_jdddh"]
+[ext_resource type="Script" path="res://Scenes/Tests/Music Bar.gd" id="11_73hg8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sa5k4"]
 texture = ExtResource("9_3rq1j")
@@ -1442,6 +1443,11 @@ texture = ExtResource("9_3rq1j")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_sa5k4")
 
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ejf07"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrk3c"]
+size = Vector2(50, 500)
+
 [node name="World" type="Node2D"]
 
 [node name="StudioBankLoader" type="StudioBankLoader" parent="."]
@@ -1473,3 +1479,18 @@ event = ExtResource("10_jdddh")
 preload_samples = true
 "parameter_Room Number" = 5.0
 position = Vector2(120, 0)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-203, -9)
+script = ExtResource("11_73hg8")
+direction = Vector2(50, 2.08165e-12)
+beatsPerMinute = 132
+beatsPerMeasure = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(50, 500)
+texture = SubResource("PlaceholderTexture2D_ejf07")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_xrk3c")
