@@ -453,6 +453,7 @@ texture = ExtResource("9_h6weq")
 0:7/0 = 0
 0:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:7/0/physics_layer_0/angular_velocity = 0.0
+0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.625, 8, -4, -8, 8, -8, 8, 8)
 1:7/0 = 0
 1:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:7/0/physics_layer_0/angular_velocity = 0.0
@@ -510,6 +511,7 @@ texture = ExtResource("9_h6weq")
 0:8/0 = 0
 0:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:8/0/physics_layer_0/angular_velocity = 0.0
+0:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.5, -8, -4.5, 8, 8, 8, 8, -8)
 1:8/0 = 0
 1:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:8/0/physics_layer_0/angular_velocity = 0.0
@@ -576,6 +578,7 @@ texture = ExtResource("9_h6weq")
 0:9/0 = 0
 0:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:9/0/physics_layer_0/angular_velocity = 0.0
+0:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.25, -8, -3.25, 1.75, 1.375, 2.75, 4.875, 8, 8, 8, 8, -8)
 1:9/0 = 0
 1:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:9/0/physics_layer_0/angular_velocity = 0.0
@@ -1460,6 +1463,7 @@ bank_6 = ExtResource("7_nsquj")
 zoom = Vector2(2, 2)
 
 [node name="Player" parent="." instance=ExtResource("8_igdsw")]
+position = Vector2(-9, -82)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_dc5vp")
