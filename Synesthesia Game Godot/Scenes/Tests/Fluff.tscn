@@ -1475,5 +1475,6 @@ preload_samples = true
 position = Vector2(120, 0)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
 position = Vector2(-60, -60)
 scale = Vector2(2, 1)
