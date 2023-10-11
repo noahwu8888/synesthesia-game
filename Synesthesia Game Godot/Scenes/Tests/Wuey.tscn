@@ -1455,6 +1455,7 @@ SPEED = 200.0
 ANIM_RUN_SPEED = 3.0
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(2, 2)
 
 [node name="StudioBankLoader" type="StudioBankLoader" parent="."]
 load_on = 1
