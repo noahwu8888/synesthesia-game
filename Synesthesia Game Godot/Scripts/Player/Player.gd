@@ -8,7 +8,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
 func _physics_process(delta):
-	self.Sprite
+	#self.Sprite
 	
 	var collision = $WallArea/CollisionShape2D
 	

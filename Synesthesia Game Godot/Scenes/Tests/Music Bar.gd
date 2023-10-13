@@ -1,5 +1,7 @@
 extends Area2D
 
+@export var start_pos : Vector2
+@export var end_pos : Vector2
 
 @export var direction : Vector2
 @export var move_speed : float = 30.0
@@ -7,22 +9,28 @@ extends Area2D
 @export var beatsPerMeasure = 0
 @export var measuresPerLoop = 0
 
+var elapsedTime = 0
+var percentToEnd = 0
 #var move_speed : float = ((60 / beatsPerMinute) * beatsPerMeasure * (measuresPerLoop))
-var start_pos : Vector2
-var target_pos : Vector2
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
-	start_pos = global_position
-	target_pos = start_pos + direction
+	move_speed = ((60.0 / beatsPerMinute) * beatsPerMeasure * (measuresPerLoop))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	global_position = global_position.move_toward(target_pos, move_speed * delta)
-
-	if global_position == target_pos:
-		global_position = start_pos
+	
+	elapsedTime += delta;
+	
+	percentToEnd = min(elapsedTime / move_speed, 1.00)
+	position = start_pos.lerp(end_pos, percentToEnd);
+	
+	if position.x == end_pos.x:
+		position = start_pos
+		elapsedTime = 0
+		
 		
 		#if global_position == start_pos:
 			#target_pos = start_pos + direction

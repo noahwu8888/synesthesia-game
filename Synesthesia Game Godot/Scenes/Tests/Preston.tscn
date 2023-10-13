@@ -1462,10 +1462,10 @@ bank_4 = ExtResource("5_trsx8")
 bank_5 = ExtResource("6_ioldm")
 bank_6 = ExtResource("7_4qfm1")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
-
 [node name="Player" parent="." instance=ExtResource("8_ond63")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(2, 2)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_dc5vp")
@@ -1483,8 +1483,8 @@ position = Vector2(120, 0)
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-160, -98)
 script = ExtResource("11_73hg8")
-direction = Vector2(100, 2.08165e-12)
-move_speed = 100.0
+start_pos = Vector2(-160, -98)
+end_pos = Vector2(560, -98)
 beatsPerMinute = 132
 beatsPerMeasure = 4
 measuresPerLoop = 4
