@@ -7,6 +7,7 @@ extends CharacterBody2D
 #animation control
 @export var ANIM_IDLE_SPEED = 1.0
 @export var ANIM_RUN_SPEED = 2.0
+@export var ANIM_JUMP_SPEED = 2.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -28,6 +29,8 @@ func _physics_process(delta):
 	
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		anim.speed_scale = ANIM_JUMP_SPEED
+		anim.play("Jump")
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
