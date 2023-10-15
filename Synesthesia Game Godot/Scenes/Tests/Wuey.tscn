@@ -10,7 +10,7 @@
 [ext_resource type="BankAsset" uid="uid://c7hw7wk1gray7" path="res://addons/FMOD/editor/resources/banks/{9432fe39-99ab-06ff-374a-dfd51b80d2c5}.tres" id="7_t1w8p"]
 [ext_resource type="Script" path="res://Scripts/AudioControl/AudioEmitter.gd" id="10_jrtox"]
 [ext_resource type="EventAsset" uid="uid://bu8ok7e6w4bqj" path="res://addons/FMOD/editor/resources/events/{f251dcd1-0000-4853-8cde-adf53d784c02}.tres" id="10_y184c"]
-[ext_resource type="PackedScene" uid="uid://65yd8miglrjb" path="res://Assets/Player/Player_Animation_Test.tscn" id="11_mkn0d"]
+[ext_resource type="PackedScene" uid="uid://65yd8miglrjb" path="res://Assets/Player/Player.tscn" id="11_mkn0d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sa5k4"]
 texture = ExtResource("1_omx6w")

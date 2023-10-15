@@ -7,7 +7,7 @@
 [ext_resource type="BankAsset" uid="uid://c67afd6t6h18o" path="res://addons/FMOD/editor/resources/banks/{33217c9b-9c49-0510-1313-2f568d660c41}.tres" id="5_6pm4f"]
 [ext_resource type="BankAsset" uid="uid://dcrshkgry2bsn" path="res://addons/FMOD/editor/resources/banks/{2fcdad43-28c2-46cf-ad09-1758d72cd705}.tres" id="6_oxqmr"]
 [ext_resource type="BankAsset" uid="uid://c7hw7wk1gray7" path="res://addons/FMOD/editor/resources/banks/{9432fe39-99ab-06ff-374a-dfd51b80d2c5}.tres" id="7_y2uod"]
-[ext_resource type="PackedScene" uid="uid://bsl6o7vfojdt5" path="res://Assets/Player/Player.tscn" id="8_d18ag"]
+[ext_resource type="PackedScene" uid="uid://65yd8miglrjb" path="res://Assets/Player/Player.tscn" id="8_d18ag"]
 [ext_resource type="Texture2D" uid="uid://db32cpjkdl4as" path="res://Art/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png" id="9_7dlwd"]
 [ext_resource type="EventAsset" uid="uid://o023157yqpug" path="res://addons/FMOD/editor/resources/events/{af8ab1c0-4482-4ead-9a7c-ab4351fe1923}.tres" id="10_bykg5"]
 
@@ -1460,6 +1460,7 @@ bank_6 = ExtResource("7_y2uod")
 zoom = Vector2(2, 2)
 
 [node name="Player" parent="." instance=ExtResource("8_d18ag")]
+SPEED = 200.0
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_dc5vp")
@@ -1473,8 +1474,3 @@ event = ExtResource("10_bykg5")
 preload_samples = true
 "parameter_Room Number" = 5.0
 position = Vector2(120, 0)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-visible = false
-position = Vector2(-60, -60)
-scale = Vector2(2, 1)
