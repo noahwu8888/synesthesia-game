@@ -78,7 +78,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_8a285"]
 resource_name = "Run"
-length = 1.6
+length = 1.8
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -111,10 +111,10 @@ tracks/2/path = NodePath("Sprite2D:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.19928, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+"values": [0, 3, 6, 9, 12, 15]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -164,7 +164,7 @@ debug_color = Color(0.764706, 0.337255, 0.756863, 0.419608)
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -7.5)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_kv66a")
+texture = ExtResource("2_yuj0i")
 hframes = 4
 vframes = 4
 frame = 1
