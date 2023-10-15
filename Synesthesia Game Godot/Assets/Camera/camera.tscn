@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqnaknw3idvgu"]
+
+[ext_resource type="Script" path="res://Assets/Camera/camera.gd" id="1_ipo17"]
+
+[node name="Camera" type="Camera2D"]
+script = ExtResource("1_ipo17")
+
+[node name="Transition_Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Transition_Timer" to="." method="_on_transition_timer_timeout"]

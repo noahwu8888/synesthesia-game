@@ -1,0 +1,99 @@
+[gd_scene load_steps=6 format=3 uid="uid://4kp7fn7a0wks"]
+
+[ext_resource type="PackedScene" uid="uid://dqnaknw3idvgu" path="res://Assets/Camera/camera.tscn" id="1_51cso"]
+[ext_resource type="Texture2D" uid="uid://7l1owckfci34" path="res://icon.svg" id="2_v6pi5"]
+[ext_resource type="PackedScene" uid="uid://bsl6o7vfojdt5" path="res://Assets/Player/Player.tscn" id="3_mtm4b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1o7qi"]
+size = Vector2(1232, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1oxre"]
+size = Vector2(1232, 20)
+
+[node name="CameraTestWorld" type="Node2D"]
+
+[node name="TempPlatform0" type="StaticBody2D" parent="."]
+position = Vector2(-592, 448)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TempPlatform0"]
+position = Vector2(615, 0)
+shape = SubResource("RectangleShape2D_1o7qi")
+
+[node name="Sprite" type="Sprite2D" parent="TempPlatform0"]
+position = Vector2(616, 0)
+scale = Vector2(9.5, 0.125)
+texture = ExtResource("2_v6pi5")
+
+[node name="Player" parent="." instance=ExtResource("3_mtm4b")]
+position = Vector2(80, 392)
+
+[node name="Camera" parent="." instance=ExtResource("1_51cso")]
+position = Vector2(576, 328)
+scale = Vector2(1.6, 1)
+default_y = 328
+
+[node name="MiscBackgroundElements" type="Node" parent="."]
+
+[node name="Icon" type="Sprite2D" parent="MiscBackgroundElements"]
+position = Vector2(-480, 376)
+texture = ExtResource("2_v6pi5")
+
+[node name="Icon2" type="Sprite2D" parent="MiscBackgroundElements"]
+position = Vector2(1992, 344)
+texture = ExtResource("2_v6pi5")
+
+[node name="Icon3" type="Sprite2D" parent="MiscBackgroundElements"]
+position = Vector2(-116, 188)
+rotation = 0.737325
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("2_v6pi5")
+
+[node name="Icon4" type="Sprite2D" parent="MiscBackgroundElements"]
+position = Vector2(144, 256)
+rotation = 2.11192
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("2_v6pi5")
+
+[node name="Icon5" type="Sprite2D" parent="MiscBackgroundElements"]
+position = Vector2(592, 256)
+rotation = -0.666254
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("2_v6pi5")
+
+[node name="Icon6" type="Sprite2D" parent="MiscBackgroundElements"]
+position = Vector2(832, 296)
+rotation = 0.708343
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("2_v6pi5")
+
+[node name="Icon8" type="Sprite2D" parent="MiscBackgroundElements"]
+position = Vector2(1296, 360)
+rotation = -0.268739
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("2_v6pi5")
+
+[node name="Icon9" type="Sprite2D" parent="MiscBackgroundElements"]
+position = Vector2(1080.25, 176.252)
+rotation = 1.10586
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("2_v6pi5")
+
+[node name="Icon10" type="Sprite2D" parent="MiscBackgroundElements"]
+position = Vector2(1608, 264)
+rotation = -1.67232
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("2_v6pi5")
+
+[node name="TempPlatform1" type="StaticBody2D" parent="."]
+position = Vector2(816, 448)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TempPlatform1"]
+position = Vector2(616, 0)
+shape = SubResource("RectangleShape2D_1oxre")
+
+[node name="Sprite" type="Sprite2D" parent="TempPlatform1"]
+position = Vector2(604, 0)
+scale = Vector2(9.4375, 0.125)
+texture = ExtResource("2_v6pi5")
+
+[connection signal="player_loaded" from="Player" to="Camera" method="_on_player_player_loaded"]

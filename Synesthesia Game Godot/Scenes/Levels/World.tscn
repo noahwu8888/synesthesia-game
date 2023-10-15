@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b0gj2dv8ar02o"]
+[gd_scene load_steps=5 format=3 uid="uid://b0gj2dv8ar02o"]
 
 [ext_resource type="Texture2D" uid="uid://db32cpjkdl4as" path="res://Art/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png" id="1_omx6w"]
 [ext_resource type="PackedScene" uid="uid://bsl6o7vfojdt5" path="res://Assets/Player/Player.tscn" id="1_x1dk8"]
@@ -1434,27 +1434,6 @@ texture = ExtResource("1_omx6w")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_sa5k4")
 
-[sub_resource type="BankAsset" id="BankAsset_h5f38"]
-file_path = "res://Sounds/Banks/Desktop/Background.bank"
-modified_time = 1695067293
-path = "bank:/Background"
-guid = "{88de2fe1-2d20-4520-8950-e7db41ca0981}"
-name = "Background"
-
-[sub_resource type="BankAsset" id="BankAsset_vbdp8"]
-file_path = "res://Sounds/Banks/Desktop/Level.bank"
-modified_time = 1695067293
-path = "bank:/Level"
-guid = "{2fcdad43-28c2-46cf-ad09-1758d72cd705}"
-name = "Level"
-
-[sub_resource type="BankAsset" id="BankAsset_rc0as"]
-file_path = "res://Sounds/Banks/Desktop/SFX.bank"
-modified_time = 1695067293
-path = "bank:/SFX"
-guid = "{a9c49e60-738e-479b-8404-79fe51d02d77}"
-name = "SFX"
-
 [node name="World" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -1470,6 +1449,6 @@ layer_0/tile_data = PackedInt32Array(196602, 0, 1, 262138, 0, 2, 327674, 0, 3, 1
 
 [node name="StudioBankLoader" type="StudioBankLoader" parent="."]
 num_banks = 3
-bank_0 = SubResource("BankAsset_h5f38")
-bank_1 = SubResource("BankAsset_vbdp8")
-bank_2 = SubResource("BankAsset_rc0as")
+bank_0 = null
+bank_1 = null
+bank_2 = null
