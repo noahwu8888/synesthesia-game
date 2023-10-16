@@ -92,11 +92,7 @@ func _process(delta):
 			self.global_position.y += (desired_pan * self.vertical_pan_speed * delta)
 		elif abs(self.player.global_position.y - self.default_y) < self.vertical_pan_reset_trigger:
 			self.global_position.y += (self.default_y - self.global_position.y) * self.vertical_pan_speed * delta
-		
-		
-		if Input.is_action_just_pressed("ui_accept"): 
-			self.new_export_vars(0, 1000, 1500, 350, Vector2(2,2))
-			self.player.global_position = Vector2(850, 350)
+
 
 func _on_player_player_loaded(player):
 	self.player = player
