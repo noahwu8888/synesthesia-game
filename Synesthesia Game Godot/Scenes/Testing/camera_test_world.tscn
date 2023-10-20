@@ -95,3 +95,5 @@ shape = SubResource("RectangleShape2D_1oxre")
 position = Vector2(604, 0)
 scale = Vector2(9.4375, 0.125)
 texture = ExtResource("2_v6pi5")
+
+[connection signal="player_loaded" from="Player" to="Camera" method="_on_player_player_loaded"]
