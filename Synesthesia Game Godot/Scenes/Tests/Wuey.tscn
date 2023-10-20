@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b0gj2dv8ar02o"]
+[gd_scene load_steps=15 format=3 uid="uid://b0gj2dv8ar02o"]
 
 [ext_resource type="BankAsset" uid="uid://dcrshkgry2bsn" path="res://addons/FMOD/editor/resources/banks/{2fcdad43-28c2-46cf-ad09-1758d72cd705}.tres" id="1_b7buj"]
 [ext_resource type="Texture2D" uid="uid://db32cpjkdl4as" path="res://Art/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png" id="1_omx6w"]
@@ -11,7 +11,6 @@
 [ext_resource type="Script" path="res://Scripts/AudioControl/AudioEmitter.gd" id="10_jrtox"]
 [ext_resource type="EventAsset" uid="uid://bu8ok7e6w4bqj" path="res://addons/FMOD/editor/resources/events/{f251dcd1-0000-4853-8cde-adf53d784c02}.tres" id="10_y184c"]
 [ext_resource type="PackedScene" uid="uid://65yd8miglrjb" path="res://Assets/Player/Player.tscn" id="11_mkn0d"]
-[ext_resource type="PackedScene" uid="uid://dqnaknw3idvgu" path="res://Assets/Camera/camera.tscn" id="12_tbrlb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sa5k4"]
 texture = ExtResource("1_omx6w")
@@ -1451,10 +1450,14 @@ sources/0 = SubResource("TileSetAtlasSource_sa5k4")
 
 [node name="World" type="Node2D"]
 
-[node name="Camera" parent="." instance=ExtResource("12_tbrlb")]
-position = Vector2(480, -32)
-
 [node name="Player" parent="." instance=ExtResource("11_mkn0d")]
+SPEED = 200.0
+ANIM_RUN_SPEED = 4.0
+ANIM_JUMP_SPEED = 1.0
+ANIM_FALL_SPEED = 0.5
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(2, 2)
 
 [node name="StudioBankLoader" type="StudioBankLoader" parent="."]
 load_on = 1

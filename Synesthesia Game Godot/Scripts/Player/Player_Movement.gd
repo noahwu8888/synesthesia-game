@@ -8,6 +8,7 @@ extends CharacterBody2D
 @export var ANIM_IDLE_SPEED = 1.0
 @export var ANIM_RUN_SPEED = 2.0
 @export var ANIM_JUMP_SPEED = 2.0
+@export var ANIM_FALL_SPEED = 2.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -36,7 +37,13 @@ func _physics_process(delta):
 		anim.speed_scale = ANIM_JUMP_SPEED
 		anim.play("Jump")
 		velocity.y = JUMP_VELOCITY
-
+	if not is_on_floor():
+		if velocity.y < 0:
+			anim.speed_scale = ANIM_JUMP_SPEED
+			anim.play("Jump")
+		else:
+			anim.speed_scale = ANIM_FALL_SPEED
+			anim.play("Fall")
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("ui_left", "ui_right")
@@ -47,11 +54,12 @@ func _physics_process(delta):
 	if direction:
 		velocity.x = direction * SPEED
 		self.facing_right = bool((direction + 1) / 2) # Calculates whether most recently moved right or left
-		anim.speed_scale = ANIM_RUN_SPEED
-		anim.play("Run")
+		if is_on_floor():
+			anim.speed_scale = ANIM_RUN_SPEED
+			anim.play("Run")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		if velocity.x == 0:
+		if velocity.x == 0 and is_on_floor():
 			anim.speed_scale = ANIM_IDLE_SPEED
 			anim.play("Idle")
 	

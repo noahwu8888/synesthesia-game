@@ -164,7 +164,7 @@ debug_color = Color(0.764706, 0.337255, 0.756863, 0.419608)
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -7.5)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_fg5rt")
+texture = ExtResource("3_8ep20")
 hframes = 4
 vframes = 4
 frame = 1
