@@ -282,6 +282,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 4
 script = ExtResource("1_cor1v")
 ANIM_JUMP_SPEED = 0.5
 
