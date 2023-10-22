@@ -72,7 +72,3 @@ func _physics_process(delta):
 
 func _on_wall_area_body_entered(body):
 	pass # Replace with function body.
-
-
-func _on_player_loaded(player):
-	pass # Replace with function body.
