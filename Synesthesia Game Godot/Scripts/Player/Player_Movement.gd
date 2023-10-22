@@ -21,19 +21,19 @@ func _ready():
 	self.player_loaded.emit(self) # Again necessary for camera to track player
 	anim.speed_scale = ANIM_IDLE_SPEED
 
+func moo():
+	pass
+	
+
 func _physics_process(delta):
 	#self.Sprite
-	
-	var collision = $WallArea/CollisionShape2D
-	
-	move_and_slide()
 	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	
 	# Handle Jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		anim.speed_scale = ANIM_JUMP_SPEED
 		anim.play("Jump")
 		velocity.y = JUMP_VELOCITY
@@ -46,14 +46,14 @@ func _physics_process(delta):
 			anim.play("Fall")
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("ui_left", "ui_right")
-	if direction == -1:
-		get_node("Sprite2D").flip_h = true
-	elif direction == 1:
-		get_node("Sprite2D").flip_h = false
-	if direction:
-		velocity.x = direction * SPEED
-		self.facing_right = bool((direction + 1) / 2) # Calculates whether most recently moved right or left
+	
+	var direction = Input.get_vector("negative_x", "positive_x", "negative_y", "positive_y", )
+	var xDir = direction.x
+	
+	if (abs(xDir) > 0.1):
+		get_node("Sprite2D").flip_h = (sign(xDir) == -1)
+		
+		velocity.x = xDir * SPEED
 		if is_on_floor():
 			anim.speed_scale = ANIM_RUN_SPEED
 			anim.play("Run")
@@ -63,16 +63,8 @@ func _physics_process(delta):
 			anim.speed_scale = ANIM_IDLE_SPEED
 			anim.play("Idle")
 	
-	
 	move_and_slide()
-	var moo = $WallArea
-	moo.get_overlapping_bodies()
 	
-
-
-func _on_wall_area_body_entered(body):
-	pass # Replace with function body.
-
 
 func _on_player_loaded(player):
 	pass # Replace with function body.
