@@ -136,7 +136,7 @@ _data = {
 "Run": SubResource("Animation_8a285")
 }
 
-[node name="Player" type="CharacterBody2D"]
+[node name="FluffPlayer" type="CharacterBody2D"]
 script = ExtResource("1_y6b3r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
