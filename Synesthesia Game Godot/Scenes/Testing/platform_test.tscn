@@ -1462,7 +1462,7 @@ catch_up_speed = 2.5
 look_ahead = 100
 
 [node name="Player" parent="." instance=ExtResource("1_8pdtc")]
-SPEED = 200.0
+SPEED = 400.0
 ANIM_RUN_SPEED = 4.0
 ANIM_JUMP_SPEED = 1.0
 ANIM_FALL_SPEED = 0.5
@@ -1500,9 +1500,11 @@ position = Vector2(-58, -182)
 shape = SubResource("RectangleShape2D_xyqr3")
 
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2(648, -104)
+position = Vector2(648, -32)
 scale = Vector2(10, 1)
 script = ExtResource("13_x2odt")
+drop_amount = 100.0
+drop_time = 3.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
 disable_mode = 1
