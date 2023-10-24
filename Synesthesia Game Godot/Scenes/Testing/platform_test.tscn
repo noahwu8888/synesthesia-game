@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://di0d1igxenxkf"]
+[gd_scene load_steps=20 format=3 uid="uid://di0d1igxenxkf"]
 
 [ext_resource type="PackedScene" uid="uid://65yd8miglrjb" path="res://Assets/Player/Player.tscn" id="1_8pdtc"]
 [ext_resource type="PackedScene" uid="uid://dqnaknw3idvgu" path="res://Assets/Camera/camera.tscn" id="1_chayd"]
@@ -13,6 +13,7 @@
 [ext_resource type="EventAsset" uid="uid://bu8ok7e6w4bqj" path="res://addons/FMOD/editor/resources/events/{f251dcd1-0000-4853-8cde-adf53d784c02}.tres" id="10_w810k"]
 [ext_resource type="Script" path="res://Scripts/AudioControl/AudioEmitter.gd" id="11_ue7v1"]
 [ext_resource type="Script" path="res://Assets/Platforms/basic_platform_mt.gd" id="13_p4of8"]
+[ext_resource type="Script" path="res://Assets/Platforms/basic_platform.gd" id="13_x2odt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sa5k4"]
 texture = ExtResource("9_2rkim")
@@ -1502,7 +1503,8 @@ shape = SubResource("RectangleShape2D_xyqr3")
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(648, -32)
 scale = Vector2(10, 1)
-script = ExtResource("13_p4of8")
+script = ExtResource("13_x2odt")
+drop_amount = 50.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
 disable_mode = 1
@@ -1518,6 +1520,26 @@ collision_mask = 4
 position = Vector2(0, -5)
 shape = SubResource("RectangleShape2D_37cwi")
 
+[node name="Node2Dmt" type="Node2D" parent="."]
+position = Vector2(904, -32)
+scale = Vector2(10, 1)
+script = ExtResource("13_p4of8")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2Dmt"]
+disable_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2Dmt/StaticBody2D"]
+shape = SubResource("RectangleShape2D_ym4j4")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="Area2D" type="Area2D" parent="Node2Dmt/StaticBody2D"]
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2Dmt/StaticBody2D/Area2D"]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_37cwi")
+
 [connection signal="player_loaded" from="Player" to="Camera" method="_on_player_player_loaded"]
 [connection signal="body_entered" from="Area2D" to="Area2D/StudioEventEmitter2D" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Node2D/StaticBody2D/Area2D" to="Node2D" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Node2Dmt/StaticBody2D/Area2D" to="Node2Dmt" method="_on_area_2d_body_entered"]
