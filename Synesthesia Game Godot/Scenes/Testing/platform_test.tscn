@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://db32cpjkdl4as" path="res://Art/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png" id="9_2rkim"]
 [ext_resource type="EventAsset" uid="uid://bu8ok7e6w4bqj" path="res://addons/FMOD/editor/resources/events/{f251dcd1-0000-4853-8cde-adf53d784c02}.tres" id="10_w810k"]
 [ext_resource type="Script" path="res://Scripts/AudioControl/AudioEmitter.gd" id="11_ue7v1"]
-[ext_resource type="Script" path="res://Assets/Platforms/basic_platform.gd" id="13_x2odt"]
+[ext_resource type="Script" path="res://Assets/Platforms/basic_platform_mt.gd" id="13_p4of8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sa5k4"]
 texture = ExtResource("9_2rkim")
@@ -1502,9 +1502,7 @@ shape = SubResource("RectangleShape2D_xyqr3")
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(648, -32)
 scale = Vector2(10, 1)
-script = ExtResource("13_x2odt")
-drop_amount = 100.0
-drop_time = 3.0
+script = ExtResource("13_p4of8")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
 disable_mode = 1
