@@ -2,7 +2,7 @@ extends Node
 
 #platform drop control
 @export var drop_amount = 10.0
-@export var drop_speed = .4
+@export var drop_speed = .5
 @export var drop_deaccel = 0.01
 @export var min_speed = .05
 @export var rise_max_speed = .5

@@ -1505,6 +1505,7 @@ position = Vector2(648, -32)
 scale = Vector2(10, 1)
 script = ExtResource("13_x2odt")
 drop_amount = 50.0
+drop_time = 4.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
 disable_mode = 1
