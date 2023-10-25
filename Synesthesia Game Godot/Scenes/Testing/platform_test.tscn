@@ -1505,7 +1505,7 @@ position = Vector2(648, -32)
 scale = Vector2(10, 1)
 script = ExtResource("13_x2odt")
 drop_amount = 50.0
-drop_time = 4.0
+drop_time = 10.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
 disable_mode = 1
@@ -1525,6 +1525,7 @@ shape = SubResource("RectangleShape2D_37cwi")
 position = Vector2(904, -32)
 scale = Vector2(10, 1)
 script = ExtResource("13_p4of8")
+drop_amount = 20.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Node2Dmt"]
 disable_mode = 1
