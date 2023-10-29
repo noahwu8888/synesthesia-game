@@ -120,6 +120,7 @@ positive_y={
 
 [layer_names]
 
+2d_physics/layer_1="Collison"
 2d_physics/layer_2="Music Logic"
 2d_physics/layer_3="Player"
 
