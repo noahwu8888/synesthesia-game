@@ -7,7 +7,7 @@
 [ext_resource type="BankAsset" uid="uid://c67afd6t6h18o" path="res://addons/FMOD/editor/resources/banks/{33217c9b-9c49-0510-1313-2f568d660c41}.tres" id="5_ffqmg"]
 [ext_resource type="BankAsset" uid="uid://dcrshkgry2bsn" path="res://addons/FMOD/editor/resources/banks/{2fcdad43-28c2-46cf-ad09-1758d72cd705}.tres" id="6_i7dk1"]
 [ext_resource type="BankAsset" uid="uid://c7hw7wk1gray7" path="res://addons/FMOD/editor/resources/banks/{9432fe39-99ab-06ff-374a-dfd51b80d2c5}.tres" id="7_x07da"]
-[ext_resource type="PackedScene" uid="uid://bsl6o7vfojdt5" path="res://Assets/Player/Player.tscn" id="8_lxgcl"]
+[ext_resource type="PackedScene" uid="uid://65yd8miglrjb" path="res://Assets/Player/Player.tscn" id="8_lxgcl"]
 [ext_resource type="Texture2D" uid="uid://db32cpjkdl4as" path="res://Art/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png" id="9_3tvuk"]
 [ext_resource type="EventAsset" uid="uid://o023157yqpug" path="res://addons/FMOD/editor/resources/events/{af8ab1c0-4482-4ead-9a7c-ab4351fe1923}.tres" id="10_lpsvx"]
 

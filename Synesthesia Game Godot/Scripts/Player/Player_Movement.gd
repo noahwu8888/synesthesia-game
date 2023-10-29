@@ -50,6 +50,9 @@ func _physics_process(delta):
 	var direction = Input.get_vector("negative_x", "positive_x", "negative_y", "positive_y", )
 	var xDir = direction.x
 	
+	if direction.x != 0: # Calculates whether most recently moved right or left
+		self.facing_right = bool((direction.x + 1) / 2) 
+	
 	if (abs(xDir) > 0.1):
 		get_node("Sprite2D").flip_h = (sign(xDir) == -1)
 		
