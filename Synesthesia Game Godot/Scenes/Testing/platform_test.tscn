@@ -11,7 +11,7 @@
 [ext_resource type="BankAsset" uid="uid://c7hw7wk1gray7" path="res://addons/FMOD/editor/resources/banks/{9432fe39-99ab-06ff-374a-dfd51b80d2c5}.tres" id="8_rtt5d"]
 [ext_resource type="Texture2D" uid="uid://db32cpjkdl4as" path="res://Art/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png" id="9_2rkim"]
 [ext_resource type="EventAsset" uid="uid://bu8ok7e6w4bqj" path="res://addons/FMOD/editor/resources/events/{f251dcd1-0000-4853-8cde-adf53d784c02}.tres" id="10_w810k"]
-[ext_resource type="Script" path="res://Scripts/AudioControl/AudioEmitter.gd" id="11_ue7v1"]
+[ext_resource type="Script" path="res://Scripts/AudioControl/Audio_Emitter.gd" id="12_7s3qd"]
 [ext_resource type="Script" path="res://Assets/Platforms/basic_platform_mt.gd" id="13_p4of8"]
 [ext_resource type="Script" path="res://Assets/Platforms/basic_platform.gd" id="13_x2odt"]
 
@@ -1468,7 +1468,6 @@ SPEED = 400.0
 JUMP_VELOCITY = -500.0
 ANIM_RUN_SPEED = 4.0
 ANIM_JUMP_SPEED = 1.0
-ANIM_FALL_SPEED = 0.5
 
 [node name="StudioBankLoader" type="StudioBankLoader" parent="."]
 load_on = 1
@@ -1495,7 +1494,7 @@ position = Vector2(120, 0)
 [node name="StudioEventEmitter2D" type="StudioEventEmitter2D" parent="Area2D"]
 event = ExtResource("10_w810k")
 preload_samples = true
-script = ExtResource("11_ue7v1")
+script = ExtResource("12_7s3qd")
 event = ExtResource("10_w810k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]

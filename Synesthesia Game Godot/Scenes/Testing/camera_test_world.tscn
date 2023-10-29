@@ -30,6 +30,8 @@ position = Vector2(80, 392)
 [node name="Camera" parent="." instance=ExtResource("1_51cso")]
 position = Vector2(576, 328)
 scale = Vector2(1.6, 1)
+right_bound = 1000
+max_change_in_speed = 0.1
 default_y = 328
 
 [node name="MiscBackgroundElements" type="Node" parent="."]

@@ -96,7 +96,7 @@ func _process(delta):
 
 func _on_player_player_loaded(player):
 	self.player = player
-
+	
 # Isn't this method an absolute bundle of joy
 # Each parameter corresponds to the exports above, and do the same
 # Every parameter by default is unchanged
