@@ -285,6 +285,7 @@ _data = {
 collision_layer = 4
 script = ExtResource("1_cor1v")
 ANIM_JUMP_SPEED = 0.5
+ANIM_FALL_SPEED = 0.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_d0qv1")
