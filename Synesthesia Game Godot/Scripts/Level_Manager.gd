@@ -17,4 +17,4 @@ func _process(delta):
 	print(camera.position.x)
 func move_to_room(room_number):
 	var room = self.rooms[room_number]
-	self.camera.new_export_vars(., room.left_bound, room.right_bound)
+	self.camera.new_export_vars(0, room.left_bound, room.right_bound)
