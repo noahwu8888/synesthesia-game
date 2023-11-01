@@ -187,14 +187,11 @@
 		<property name="length">
 			<value>7.0588235294117645</value>
 		</property>
-		<property name="quantizationInterval">
-			<value>12</value>
-		</property>
 		<property name="name">
 			<value>Room 2</value>
 		</property>
 		<property name="looping">
-			<value>0</value>
+			<value>2</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{a61c5d83-c416-48d8-949f-eedec0b06551}</destination>
@@ -217,13 +214,16 @@
 			<value>Room 1</value>
 		</property>
 		<property name="looping">
-			<value>0</value>
+			<value>2</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{a61c5d83-c416-48d8-949f-eedec0b06551}</destination>
 		</relationship>
 		<relationship name="markerTrack">
 			<destination>{686a2ea8-ab1f-4bb2-8b77-e499e2c949e4}</destination>
+		</relationship>
+		<relationship name="triggerConditions">
+			<destination>{18f565b8-cfda-48ae-9f38-dce2c455d33e}</destination>
 		</relationship>
 	</object>
 	<object class="TransitionMarker" id="{afe78124-87af-43f4-a40c-2a9bc3a5cf42}">
@@ -284,14 +284,11 @@
 		<property name="length">
 			<value>14.117647058823529</value>
 		</property>
-		<property name="quantizationInterval">
-			<value>12</value>
-		</property>
 		<property name="name">
 			<value>Room 4</value>
 		</property>
 		<property name="looping">
-			<value>0</value>
+			<value>2</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{a61c5d83-c416-48d8-949f-eedec0b06551}</destination>
@@ -310,14 +307,11 @@
 		<property name="length">
 			<value>14.117647058823529</value>
 		</property>
-		<property name="quantizationInterval">
-			<value>12</value>
-		</property>
 		<property name="name">
 			<value>Room 3</value>
 		</property>
 		<property name="looping">
-			<value>0</value>
+			<value>2</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{a61c5d83-c416-48d8-949f-eedec0b06551}</destination>
@@ -336,14 +330,11 @@
 		<property name="length">
 			<value>14.117647058823529</value>
 		</property>
-		<property name="quantizationInterval">
-			<value>12</value>
-		</property>
 		<property name="name">
 			<value>Room 5</value>
 		</property>
 		<property name="looping">
-			<value>0</value>
+			<value>2</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{a61c5d83-c416-48d8-949f-eedec0b06551}</destination>
@@ -494,6 +485,17 @@
 			<destination>{53ba8a21-e626-4bc9-96d4-448965388087}</destination>
 		</relationship>
 	</object>
+	<object class="ParameterCondition" id="{18f565b8-cfda-48ae-9f38-dce2c455d33e}">
+		<property name="minimum">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>1</value>
+		</property>
+		<relationship name="parameter">
+			<destination>{53ba8a21-e626-4bc9-96d4-448965388087}</destination>
+		</relationship>
+	</object>
 	<object class="ParameterCondition" id="{5cc4b1e7-0e7d-4f46-9dab-642ed7dfc3e2}">
 		<property name="minimum">
 			<value>1</value>
@@ -529,10 +531,10 @@
 	</object>
 	<object class="ParameterCondition" id="{b1710b86-d46e-46a1-9710-7a0c37fc7874}">
 		<property name="minimum">
-			<value>2</value>
+			<value>4</value>
 		</property>
 		<property name="maximum">
-			<value>2</value>
+			<value>4</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{53ba8a21-e626-4bc9-96d4-448965388087}</destination>
@@ -540,10 +542,10 @@
 	</object>
 	<object class="ParameterCondition" id="{b34ff12b-eb1e-4f8a-b373-c750f5c41277}">
 		<property name="minimum">
-			<value>2</value>
+			<value>3</value>
 		</property>
 		<property name="maximum">
-			<value>2</value>
+			<value>3</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{53ba8a21-e626-4bc9-96d4-448965388087}</destination>
@@ -551,10 +553,10 @@
 	</object>
 	<object class="ParameterCondition" id="{d1ad5411-ab1c-4f49-9e3c-bfc3b3717e8c}">
 		<property name="minimum">
-			<value>2</value>
+			<value>5</value>
 		</property>
 		<property name="maximum">
-			<value>2</value>
+			<value>5</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{53ba8a21-e626-4bc9-96d4-448965388087}</destination>
