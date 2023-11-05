@@ -11,11 +11,18 @@ script = ExtResource("1_cp8g4")
 [node name="Entrance" parent="." instance=ExtResource("1_ju87o")]
 entrance = true
 
+[node name="Entrance_Trigger" type="Area2D" parent="Entrance"]
+position = Vector2(0, 56)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Entrance/Entrance_Trigger"]
+shape = SubResource("RectangleShape2D_1eumc")
+
 [node name="Exit" parent="." instance=ExtResource("1_ju87o")]
 position = Vector2(75, 0)
 
-[node name="Exit_Trigger" type="Area2D" parent="."]
-position = Vector2(75, -45)
+[node name="Exit_Trigger" type="Area2D" parent="Exit"]
+position = Vector2(-3, 56)
+collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit_Trigger"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit/Exit_Trigger"]
 shape = SubResource("RectangleShape2D_1eumc")
