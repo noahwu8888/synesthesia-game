@@ -1464,10 +1464,9 @@ catch_up_speed = 2.5
 look_ahead = 100
 
 [node name="Player" parent="." instance=ExtResource("1_8pdtc")]
-SPEED = 400.0
-JUMP_VELOCITY = -500.0
 ANIM_RUN_SPEED = 4.0
 ANIM_JUMP_SPEED = 1.0
+SPEED = 400.0
 
 [node name="StudioBankLoader" type="StudioBankLoader" parent="."]
 load_on = 1
