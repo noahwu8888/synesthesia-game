@@ -1487,7 +1487,7 @@ layer_0/tile_data = PackedInt32Array(196602, 0, 1, 262138, 0, 2, 327674, 0, 3, 1
 script = ExtResource("13_sq3hu")
 right_bound = 800
 
-[node name="Area2D" type="Area2D" parent="Rooms/Room0"]
+[node name="Music_Bar" type="Area2D" parent="Rooms/Room0"]
 position = Vector2(0, -98)
 collision_layer = 2
 collision_mask = 2
@@ -1498,12 +1498,12 @@ beatsPerMinute = 132
 beatsPerMeasure = 4
 measuresPerLoop = 4
 
-[node name="Sprite2D" type="Sprite2D" parent="Rooms/Room0/Area2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Rooms/Room0/Music_Bar"]
 position = Vector2(2.08165e-12, 2.08165e-12)
 scale = Vector2(50, 500)
 texture = SubResource("PlaceholderTexture2D_ejf07")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Room0/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Room0/Music_Bar"]
 shape = SubResource("RectangleShape2D_xrk3c")
 one_way_collision_margin = 0.0
 
@@ -1513,6 +1513,26 @@ current_room = 1
 transition_timer = 0.5
 left_bound = 800
 right_bound = 1600
+
+[node name="Music_Bar" type="Area2D" parent="Rooms/Room1"]
+position = Vector2(816, -88)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("10_720vt")
+start_pos = Vector2(800, -98)
+end_pos = Vector2(1600, -98)
+beatsPerMinute = 132
+beatsPerMeasure = 4
+measuresPerLoop = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Rooms/Room1/Music_Bar"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(50, 500)
+texture = SubResource("PlaceholderTexture2D_ejf07")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Room1/Music_Bar"]
+shape = SubResource("RectangleShape2D_xrk3c")
+one_way_collision_margin = 0.0
 
 [node name="Room2" type="Node2D" parent="Rooms"]
 script = ExtResource("13_sq3hu")
@@ -1524,18 +1544,38 @@ upper_bound = -704
 lower_bound = -416
 default_y = -416
 
-[node name="Portal Group" type="Node" parent="."]
+[node name="Music_Bar" type="Area2D" parent="Rooms/Room2"]
+position = Vector2(2408, -528)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("10_720vt")
+start_pos = Vector2(2368, -480)
+end_pos = Vector2(3200, -480)
+beatsPerMinute = 132
+beatsPerMeasure = 4
+measuresPerLoop = 4
 
-[node name="0-1" parent="Portal Group" instance=ExtResource("2_70h3u")]
+[node name="Sprite2D" type="Sprite2D" parent="Rooms/Room2/Music_Bar"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+scale = Vector2(50, 500)
+texture = SubResource("PlaceholderTexture2D_ejf07")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/Room2/Music_Bar"]
+shape = SubResource("RectangleShape2D_xrk3c")
+one_way_collision_margin = 0.0
+
+[node name="PortalGroup" type="Node" parent="."]
+
+[node name="0-1" parent="PortalGroup" instance=ExtResource("2_70h3u")]
 position = Vector2(776, -48)
 
-[node name="1-2" parent="Portal Group" instance=ExtResource("2_70h3u")]
+[node name="1-2" parent="PortalGroup" instance=ExtResource("2_70h3u")]
 position = Vector2(1576, -40)
 
-[node name="Exit" parent="Portal Group/1-2" index="1"]
+[node name="Exit" parent="PortalGroup/1-2" index="1"]
 position = Vector2(856, -424)
 
 [connection signal="player_loaded" from="Player" to="Camera" method="_on_player_player_loaded"]
 
-[editable path="Portal Group/0-1"]
-[editable path="Portal Group/1-2"]
+[editable path="PortalGroup/0-1"]
+[editable path="PortalGroup/1-2"]

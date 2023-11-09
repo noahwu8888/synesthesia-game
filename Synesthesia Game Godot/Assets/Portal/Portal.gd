@@ -23,9 +23,7 @@ func _on_body_entered(body):
 	body.velocity = Vector2.ZERO
 	if entrance:
 		#Write something later to deactivate player script and wait for the exit trigger
-		root_node.current_room += 1
-		root_node.move_to_room(root_node.current_room, self.exit_trigger.global_position)
+		root_node.move_to_room(root_node.current_room + 1, self.exit_trigger.global_position)
 	else:
-		root_node.current_room -= 1
-		root_node.move_to_room(root_node.current_room, self.entrance_trigger.global_position)
+		root_node.move_to_room(root_node.current_room - 1, self.entrance_trigger.global_position)
 
