@@ -29,6 +29,8 @@ extends Camera2D
 ## Speed camera goes up/down when the player reaches the desired threshold
 @export var vertical_pan_speed = 1.2
 
+const WINDOW_WIDTH = 1152
+
 var moving = false # tracks if the camera is moving
 
 var player # Gets populated by player when player loads in 
@@ -45,6 +47,9 @@ var zoom_transition_distance = null
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	self.position.y = self.default_y
+	var bound_modifier = self.WINDOW_WIDTH / (2 * self.zoom.x)
+	self.left_bound += bound_modifier
+	self.right_bound -= bound_modifier
 
 
 
@@ -81,7 +86,6 @@ func _process(delta):
 			self.old_speed = change_in_pos + self.max_change_in_speed
 			
 			if self.stop_distance > abs(player_distance): moving = false
-			
 		if self.global_position.x > self.right_bound: self.global_position.x = self.right_bound # fix if goes too far right
 		if self.global_position.x < self.left_bound: self.global_position.x = self.left_bound # Fix if goes too far left
 		
@@ -116,9 +120,11 @@ func new_export_vars(
 					look_ahead: int = self.look_ahead,
 					vertical_pan_speed: float = self.vertical_pan_speed,
 					):
+	var bound_modifier = self.WINDOW_WIDTH / (2 * zoom.x)
+	
 	self.transition_time = transition_time
-	self.left_bound = left_bound
-	self.right_bound = right_bound
+	self.left_bound = left_bound + bound_modifier
+	self.right_bound = right_bound - bound_modifier
 	self.max_stationary_distance = max_stationary_distance
 	self.stop_distance = stop_distance
 	self.catch_up_speed  = catch_up_speed
