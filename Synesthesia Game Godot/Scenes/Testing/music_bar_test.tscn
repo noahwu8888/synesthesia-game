@@ -1456,6 +1456,7 @@ script = ExtResource("1_hvtyi")
 metadata/_edit_horizontal_guides_ = [-256.0]
 
 [node name="Camera" parent="." instance=ExtResource("2_cjeje")]
+zoom = Vector2(2, 2)
 right_bound = 800
 
 [node name="StudioBankLoader" type="StudioBankLoader" parent="."]
