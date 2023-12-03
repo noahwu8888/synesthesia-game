@@ -40,6 +40,8 @@ var new_zoom
 var transition = false
 var old_speed = 0
 
+var start_at_end = false
+
 var vertical_transition_distance = null
 var horizonatal_transition_distance = null
 var zoom_transition_distance = null
@@ -58,7 +60,7 @@ func _process(delta):
 	if transition:
 		if self.vertical_transition_distance == null:
 			self.vertical_transition_distance = self.default_y - self.global_position.y
-			self.horizonatal_transition_distance = self.left_bound - self.global_position.x
+			self.horizonatal_transition_distance = (self.right_bound if self.start_at_end else self.left_bound) - self.global_position.x
 			self.zoom_transition_distance = self.new_zoom - self.zoom
 		self.global_position.x += (self.horizonatal_transition_distance * delta) / self.transition_time
 		self.global_position.y += (self.vertical_transition_distance * delta) / self.transition_time
@@ -106,6 +108,7 @@ func _on_player_player_loaded(player):
 # Every parameter by default is unchanged
 func new_export_vars(
 					transition_time, #Only required args, in seconds, 0 means snap cut!!!
+					start_at_end: bool = false, # whether it statts at left bound or right bound
 					left_bound: int = self.left_bound,
 					right_bound: int = self.right_bound, 
 					default_y: int = self.default_y,
@@ -123,6 +126,7 @@ func new_export_vars(
 	if self.transition:
 		return
 	var bound_modifier = self.WINDOW_WIDTH / (2 * zoom.x)
+	self.start_at_end = start_at_end
 	
 	self.transition_time = transition_time
 	self.left_bound = left_bound + bound_modifier
