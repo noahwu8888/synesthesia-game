@@ -1487,6 +1487,7 @@ layer_0/tile_data = PackedInt32Array(196602, 0, 1, 262138, 0, 2, 327674, 0, 3, 1
 [node name="Room0" type="Node2D" parent="Rooms"]
 script = ExtResource("13_sq3hu")
 right_bound = 800
+zoom = Vector2(2, 2)
 
 [node name="Music_Bar" type="Area2D" parent="Rooms/Room0"]
 position = Vector2(0, -98)
@@ -1514,6 +1515,7 @@ current_room = 1
 transition_timer = 0.5
 left_bound = 800
 right_bound = 1600
+zoom = Vector2(2, 2)
 
 [node name="Music_Bar" type="Area2D" parent="Rooms/Room1"]
 position = Vector2(816, -88)
@@ -1544,6 +1546,7 @@ right_bound = 3200
 upper_bound = -704
 lower_bound = -416
 default_y = -416
+zoom = Vector2(1, 1)
 
 [node name="Music_Bar" type="Area2D" parent="Rooms/Room2"]
 position = Vector2(2408, -528)
