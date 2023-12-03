@@ -26,15 +26,16 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if should_transition && music_bar.reached_end:
-		transition_zoom(room_number, output_pos)
+		transition_zoom(room_number, output_pos, type_of_transition)
 		print(current_room)
 
-func move_to_room(room_number, output_pos):
+func move_to_room(room_number, output_pos, is_backward):
 	room = self.rooms[room_number]
 	music_bar = self.rooms[current_room].get_child(0, false)
 	self.output_pos = output_pos
 	self.room_number = room_number
 	print(music_bar.reached_end)
+	type_of_transition = is_backward
 	"""
 	Insert Player Freeze Code Here
 	"""
