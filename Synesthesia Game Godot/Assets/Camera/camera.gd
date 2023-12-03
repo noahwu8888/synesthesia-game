@@ -120,6 +120,8 @@ func new_export_vars(
 					look_ahead: int = self.look_ahead,
 					vertical_pan_speed: float = self.vertical_pan_speed,
 					):
+	if self.transition:
+		return
 	var bound_modifier = self.WINDOW_WIDTH / (2 * zoom.x)
 	
 	self.transition_time = transition_time

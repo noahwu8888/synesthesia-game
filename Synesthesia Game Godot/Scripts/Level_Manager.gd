@@ -43,15 +43,18 @@ func transition(room_number, output_pos):
 	self.camera.new_export_vars(room.transition_timer, room.left_bound, room.right_bound, room.default_y)
 	player.global_position = output_pos
 	current_room = room_number
+	should_transition = false
 
 #for zoom transitions
 func transition_zoom(room_number, output_pos):
 	self.camera.new_export_vars(room.transition_timer, room.left_bound, room.right_bound, room.default_y, room.zoom)
 	player.global_position = output_pos
 	current_room = room_number
+	should_transition = false
 
 #for all variables modified
 func transition_adv(room_number, output_pos):
 	self.camera.new_export_vars(room.transition_timer, room.left_bound, room.right_bound, room.default_y, room.zoom, room.vertical_pan_trigger, room.vertical_pan_reset_trigger, room.vertical_pan_distance)
 	player.global_position = output_pos
 	current_room = room_number
+	should_transition = false
