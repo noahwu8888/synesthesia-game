@@ -57,7 +57,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print(self.start_at_end)
+	#print(self.start_at_end)
 	if transition:
 		if self.vertical_transition_distance == null:
 			self.vertical_transition_distance = self.default_y - self.global_position.y
