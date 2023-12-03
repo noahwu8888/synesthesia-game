@@ -26,16 +26,17 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if should_transition && music_bar.reached_end:
-		transition_zoom(room_number, output_pos, type_of_transition)
-		print(current_room)
+		transition_zoom(room_number, output_pos)
+		#print(current_room)
 
 func move_to_room(room_number, output_pos, is_backward):
 	room = self.rooms[room_number]
 	music_bar = self.rooms[current_room].get_child(0, false)
 	self.output_pos = output_pos
 	self.room_number = room_number
-	print(music_bar.reached_end)
+	#print(music_bar.reached_end)
 	type_of_transition = is_backward
+	print(type_of_transition)
 	"""
 	Insert Player Freeze Code Here
 	"""
@@ -45,15 +46,15 @@ func move_to_room(room_number, output_pos, is_backward):
 
 
 #for zoom transitions
-func transition_zoom(room_number, output_pos, is_backward):
-	self.camera.new_export_vars(room.transition_timer, room.left_bound, room.right_bound, room.default_y, room.zoom)
+func transition_zoom(room_number, output_pos):
+	self.camera.new_export_vars(room.transition_timer, type_of_transition, room.left_bound, room.right_bound, room.default_y, room.zoom)
 	player.global_position = output_pos
 	current_room = room_number
 	should_transition = false
 
 #for all variables modified
-func transition_adv(room_number, output_pos, is_backward):
-	self.camera.new_export_vars(room.transition_timer, room.left_bound, room.right_bound, room.default_y, room.zoom, room.vertical_pan_trigger, room.vertical_pan_reset_trigger, room.vertical_pan_distance)
+func transition_adv(room_number, output_pos):
+	self.camera.new_export_vars(room.transition_timer, type_of_transition, room.left_bound, room.right_bound, room.default_y, room.zoom, room.vertical_pan_trigger, room.vertical_pan_reset_trigger, room.vertical_pan_distance)
 	player.global_position = output_pos
 	current_room = room_number
 	should_transition = false
