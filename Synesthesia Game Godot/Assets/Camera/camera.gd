@@ -73,13 +73,16 @@ func _process(delta):
 		if abs(player_distance) > max_stationary_distance:
 			self.moving = true
 		
+		
 		if self.moving: # Used to figure out where the camera should be going
 			var right_wall_distance = self.right_bound - self.global_position.x
 			var left_wall_distance = self.left_bound - self.global_position.x
 			
 			var movement_distance = player_distance
-			if self.player.facing_right and abs(movement_distance) > abs(right_wall_distance): movement_distance = right_wall_distance
-			if not self.player.facing_right and abs(movement_distance) > abs(left_wall_distance): movement_distance = left_wall_distance
+			if player_distance > 0 and self.global_position.x + player_distance > right_wall_distance: movement_distance = right_wall_distance
+			elif player_distance < 0 and self.global_position.x + player_distance > right_wall_distance: movement_distance = left_wall_distance
+			#if self.player.facing_right and abs(movement_distance) > abs(right_wall_distance): movement_distance = right_wall_distance
+			#if not self.player.facing_right and abs(movement_distance) > abs(left_wall_distance): movement_distance = left_wall_distance
 			
 			# Used to clamp the maximum change in speed, stops jittery camera bug when close to walls
 			var change_in_pos = min(abs(movement_distance) * self.catch_up_speed * delta, old_speed + self.max_change_in_speed) 
