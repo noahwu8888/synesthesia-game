@@ -58,3 +58,4 @@ func transition_adv(room_number, output_pos):
 	player.global_position = output_pos
 	current_room = room_number
 	should_transition = false
+

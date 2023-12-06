@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://ch0wrfoslhwdp"]
+[gd_scene load_steps=22 format=3 uid="uid://ch0wrfoslhwdp"]
 
 [ext_resource type="Script" path="res://Scripts/Level_Manager.gd" id="1_hvtyi"]
 [ext_resource type="BankAsset" uid="uid://shbrg3pqq124" path="res://addons/FMOD/editor/resources/banks/{c0f9df84-d112-460a-aaf3-94c1f73df78e}.tres" id="1_ru2ha"]
@@ -12,6 +12,8 @@
 [ext_resource type="BankAsset" uid="uid://c7hw7wk1gray7" path="res://addons/FMOD/editor/resources/banks/{9432fe39-99ab-06ff-374a-dfd51b80d2c5}.tres" id="7_l40cu"]
 [ext_resource type="PackedScene" uid="uid://65yd8miglrjb" path="res://Assets/Player/Player.tscn" id="8_31po0"]
 [ext_resource type="Script" path="res://Scripts/AudioControl/Music_Bar.gd" id="10_720vt"]
+[ext_resource type="EventAsset" uid="uid://drgf86hgo0p6c" path="res://addons/FMOD/editor/resources/events/{5c639b0d-37f9-4500-9f21-63d84688928c}.tres" id="10_revu4"]
+[ext_resource type="Script" path="res://Scripts/AudioControl/Audio_Emitter.gd" id="11_bw1ht"]
 [ext_resource type="Texture2D" uid="uid://curgml64a7hty" path="res://Art/ACTUAL ART FOLDER/Platforms/Fluorescent blue Solid Color.jpg" id="11_bxgfg"]
 [ext_resource type="Script" path="res://Scripts/Level_Manager/Room_Script.gd" id="13_sq3hu"]
 
@@ -1345,6 +1347,12 @@ bank_3 = ExtResource("4_1cgls")
 bank_4 = ExtResource("5_q2t5d")
 bank_5 = ExtResource("6_mf3q7")
 bank_6 = ExtResource("7_l40cu")
+
+[node name="StudioEventEmitter2D" type="StudioEventEmitter2D" parent="."]
+play_event = 2
+event = ExtResource("10_revu4")
+script = ExtResource("11_bw1ht")
+event = ExtResource("10_revu4")
 
 [node name="Player" parent="." instance=ExtResource("8_31po0")]
 position = Vector2(24, 0)
