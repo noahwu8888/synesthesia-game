@@ -1,10 +1,10 @@
 extends CharacterBody2D
 
-#animation control
+'''#animation control
 @export var ANIM_IDLE_SPEED = 1.0
 @export var ANIM_RUN_SPEED = 2.0
 @export var ANIM_JUMP_SPEED = 2.0
-@export var ANIM_FALL_SPEED = 2.0
+@export var ANIM_FALL_SPEED = 2.0'''
 
 #character physics control
 @export var SPEED = 300.0
@@ -40,11 +40,11 @@ var carryOverTime = 0
 var isCoyote = false
 var lastTouchingGround = 0
 
-@onready var anim = get_node("AnimationPlayer")
+#@onready var anim = get_node("AnimationPlayer")
 
 func _ready():
 	self.player_loaded.emit(self) # Again necessary for camera to track player
-	anim.speed_scale = ANIM_IDLE_SPEED
+	#anim.speed_scale = ANIM_IDLE_SPEED
 
 func easingOutQuad(x):
 	return 1 - (1 - x) * (1 - x)
@@ -60,8 +60,8 @@ func jump(isCarryOver):
 			calculatedJumpPower = JUMP_POWER * (1 + heldPercent * MAX_JUMP_MODIFIER)
 			
 		velocity.y = -1.0 * calculatedJumpPower
-		anim.speed_scale = ANIM_JUMP_SPEED
-		anim.play("Jump")
+		#anim.speed_scale = ANIM_JUMP_SPEED
+		#anim.play("Jump")
 	else:
 		carryOverJump = true
 		carryOverTime = 0
@@ -110,11 +110,12 @@ func _physics_process(delta):
 	
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		'''if velocity.y < 0:
 			anim.speed_scale = ANIM_JUMP_SPEED
 			anim.play("Jump")
 		else:
 			anim.speed_scale = ANIM_FALL_SPEED
-			anim.play("Fall")
+			anim.play("Fall")'''
 	
 	var direction = Input.get_vector("negative_x", "positive_x", "negative_y", "positive_y", )
 	var xDir = direction.x
@@ -123,19 +124,19 @@ func _physics_process(delta):
 		self.facing_right = bool((direction.x + 1) / 2) 
 	
 	if (abs(xDir) > 0.1):
-		get_node("Sprite2D").flip_h = (sign(xDir) == -1)
+		#get_node("Sprite2D").flip_h = (sign(xDir) == -1)
 		
 		var slowdownAmount = clamp((heldJumpTime - CROUCHING_TIME_TILL_SLOWDOWN) / CROUCHING_SLOWDOWN_TIME, 0, 1)
 		var crouchingMovementMod = (1 - 0.5 * slowdownAmount) if (is_on_floor() and holdingJump and (not jumpRejected)) else 1
 		velocity.x = xDir * crouchingMovementMod * SPEED
-		if is_on_floor():
+		'''if is_on_floor():
 			anim.speed_scale = ANIM_RUN_SPEED
-			anim.play("Run")
+			anim.play("Run")'''
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		if velocity.x == 0 and is_on_floor():
+		'''if velocity.x == 0 and is_on_floor():
 			anim.speed_scale = ANIM_IDLE_SPEED
-			anim.play("Idle")
+			anim.play("Idle")'''
 	
 	move_and_slide()
 	

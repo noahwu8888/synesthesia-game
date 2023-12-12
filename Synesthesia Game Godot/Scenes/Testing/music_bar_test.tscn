@@ -1356,19 +1356,6 @@ event = ExtResource("10_revu4")
 
 [node name="Player" parent="." instance=ExtResource("8_31po0")]
 position = Vector2(24, 0)
-ANIM_IDLE_SPEED = null
-ANIM_RUN_SPEED = null
-ANIM_FALL_SPEED = 1.0
-SPEED = null
-COYOTE_TIME = null
-ANTICIPATE_LANDING_JUMP_HOLD_TIME = null
-ANTICIPATE_JUMP_CARRYOVER_TIME = null
-TAP_JUMP_THRESH = null
-MAX_JUMP_HOLD_TIME = null
-CROUCHING_TIME_TILL_SLOWDOWN = null
-CROUCHING_SLOWDOWN_TIME = null
-JUMP_POWER = 500.0
-MAX_JUMP_MODIFIER = null
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_j37ia")
