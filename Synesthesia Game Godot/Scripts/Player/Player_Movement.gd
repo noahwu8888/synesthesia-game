@@ -110,7 +110,6 @@ func _physics_process(delta):
 	
 	if not is_on_floor():
 		velocity.y += gravity * delta
-		if velocity.y < 0:
 			anim.speed_scale = ANIM_JUMP_SPEED
 			anim.play("Jump")
 		else:
