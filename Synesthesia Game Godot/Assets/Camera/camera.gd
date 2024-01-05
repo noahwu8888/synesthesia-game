@@ -40,6 +40,8 @@ var new_zoom
 var transition = false
 var old_speed = 0
 
+var start_at_end = false
+
 var vertical_transition_distance = null
 var horizonatal_transition_distance = null
 var zoom_transition_distance = null
@@ -55,10 +57,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	#print(self.start_at_end)
 	if transition:
 		if self.vertical_transition_distance == null:
 			self.vertical_transition_distance = self.default_y - self.global_position.y
-			self.horizonatal_transition_distance = self.left_bound - self.global_position.x
+			self.horizonatal_transition_distance = (self.right_bound if self.start_at_end else self.left_bound) - self.global_position.x
 			self.zoom_transition_distance = self.new_zoom - self.zoom
 		self.global_position.x += (self.horizonatal_transition_distance * delta) / self.transition_time
 		self.global_position.y += (self.vertical_transition_distance * delta) / self.transition_time
@@ -70,13 +73,16 @@ func _process(delta):
 		if abs(player_distance) > max_stationary_distance:
 			self.moving = true
 		
+		
 		if self.moving: # Used to figure out where the camera should be going
 			var right_wall_distance = self.right_bound - self.global_position.x
 			var left_wall_distance = self.left_bound - self.global_position.x
 			
 			var movement_distance = player_distance
-			if self.player.facing_right and abs(movement_distance) > abs(right_wall_distance): movement_distance = right_wall_distance
-			if not self.player.facing_right and abs(movement_distance) > abs(left_wall_distance): movement_distance = left_wall_distance
+			if player_distance > 0 and self.global_position.x + player_distance > right_wall_distance: movement_distance = right_wall_distance
+			elif player_distance < 0 and self.global_position.x + player_distance > right_wall_distance: movement_distance = left_wall_distance
+			#if self.player.facing_right and abs(movement_distance) > abs(right_wall_distance): movement_distance = right_wall_distance
+			#if not self.player.facing_right and abs(movement_distance) > abs(left_wall_distance): movement_distance = left_wall_distance
 			
 			# Used to clamp the maximum change in speed, stops jittery camera bug when close to walls
 			var change_in_pos = min(abs(movement_distance) * self.catch_up_speed * delta, old_speed + self.max_change_in_speed) 
@@ -106,6 +112,7 @@ func _on_player_player_loaded(player):
 # Every parameter by default is unchanged
 func new_export_vars(
 					transition_time, #Only required args, in seconds, 0 means snap cut!!!
+					start_at_end: bool = false, # whether it statts at left bound or right bound
 					left_bound: int = self.left_bound,
 					right_bound: int = self.right_bound, 
 					default_y: int = self.default_y,
@@ -120,7 +127,10 @@ func new_export_vars(
 					look_ahead: int = self.look_ahead,
 					vertical_pan_speed: float = self.vertical_pan_speed,
 					):
+	if self.transition:
+		return
 	var bound_modifier = self.WINDOW_WIDTH / (2 * zoom.x)
+	self.start_at_end = start_at_end
 	
 	self.transition_time = transition_time
 	self.left_bound = left_bound + bound_modifier

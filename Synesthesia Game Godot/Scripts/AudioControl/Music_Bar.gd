@@ -11,6 +11,7 @@ extends Area2D
 
 var elapsedTime = 0
 var percentToEnd = 0
+var reached_end = false
 #var move_speed : float = ((60 / beatsPerMinute) * beatsPerMeasure * (measuresPerLoop))
 
 # Called when the node enters the scene tree for the first time.
@@ -21,15 +22,18 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
 	elapsedTime += delta;
 	
 	percentToEnd = min(elapsedTime / move_speed, 1.00)
 	position = start_pos.lerp(end_pos, percentToEnd);
 	
+	if percentToEnd > .01:
+		reached_end = false
+	
 	if position.x == end_pos.x:
 		position = start_pos
 		elapsedTime = 0
+		reached_end = true
 		
 		
 		#if global_position == start_pos:
